@@ -1,0 +1,8 @@
+@mixin column-flex {
+	display: flex;
+	flex-direction: column;
+}
+
+.full-w-column {
+	@include column-flex;
+}

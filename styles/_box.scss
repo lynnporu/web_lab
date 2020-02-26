@@ -1,0 +1,17 @@
+.box {
+	background: white;
+	padding: 40px;
+	width: max-content;
+	box-shadow: 3px 3px 20px 0 rgba(0, 0, 0, .1)
+}
+
+.box.center-w {
+	margin: auto;
+}
+
+.box.spacing-h {
+	margin: {
+		top: 5%;
+		bottom: 5%;
+	}
+}

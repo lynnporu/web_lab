@@ -1,0 +1,41 @@
+input, button, input[type="submit"], input[type="reset"] {
+	border: 0;
+	font: inherit;
+	transition: $std-transition;
+	padding: {
+		top: 10px;
+		bottom: 10px;
+	}
+}
+
+button, input[type="submit"], input[type="reset"] {
+	padding: {
+		left: 20px;
+		right: 20px;
+	}
+	background: $accent-color;
+	color: $main-color;
+	cursor: pointer;
+	box-shadow: 0 0 0 2px $accent-color inset;
+}
+
+button:hover, input[type="submit"]:hover, input[type="reset"]:hover {
+	background: transparent;
+	color: $accent-color;
+}
+
+button:active, input[type="submit"]:active, input[type="reset"]:active {
+	box-shadow: 0 0 0 4px $accent-color inset;
+}
+
+input[type="text"] {
+	box-shadow: 0 -2px 0 0 inset $opacity-color;
+}
+
+input[type="text"]:hover {
+	box-shadow: 0 -2px 0 0 inset $opacity-darker-color;
+}
+
+input[type="text"]:focus {
+	box-shadow: 0 -2px 0 0 inset $accent-color;
+}
