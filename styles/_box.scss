@@ -1,8 +1,26 @@
+@mixin box-shadowing {
+	box-shadow: 3px 3px 20px 0 rgba(0, 0, 0, .1);
+}
+
+@mixin box-hard-shadowing {
+	box-shadow: 0 10px 40px 0 rgba(0, 0, 0, .2);
+}
+
+@mixin box-hard-darker-shadowing {
+	box-shadow: 0 10px 40px 0 rgba(0, 0, 0, .3);
+}
+
+@mixin box-rounding {
+	border-radius: 20px;
+}
+
 .box {
+
 	background: white;
 	padding: 40px;
 	width: max-content;
-	box-shadow: 3px 3px 20px 0 rgba(0, 0, 0, .1)
+	@include box-shadowing;
+	@include box-rounding;
 }
 
 .box.center-w {
