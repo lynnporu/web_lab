@@ -1,18 +1,27 @@
-@import url(https://fonts.googleapis.com/css?family=Comfortaa:500|Open+Sans&display=swap&subset=cyrillic);
+@import url(https://fonts.googleapis.com/css?family=Comfortaa:500|Rubik:400,500&display=swap&subset=cyrillic);
 
 $main-color:				white;
 $accent-color:				blue;
+$unaccent-color:			#667d;
+$unaccent-darker-color:		#667f;
+$unaccent-dark-color:   #556;
 $opacity-color:				#e2e2e2;
 $opacity-darker-color:		#d9d9d9;
 
 $std-transition:			.15s;
 
+$first-level-media:			500px;
+
 body {
-	font-family: Open Sans, sans-serif;
+	font-family: Rubik, sans-serif;
 	margin: 0;
 	padding: 0;
 	background: #f4f4f4;
 	font-size: 12px;
+}
+
+h1, h2, h3 {
+	font-weight: 500;
 }
 
 @import "containers";
@@ -20,3 +29,4 @@ body {
 @import "box";
 
 @import "screen_login";
+@import "main_page";
