@@ -1,0 +1,193 @@
+@import 'box';
+@import 'animations';
+
+.main-page {
+
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: center;
+	padding: 50px 0;
+	
+	@media (max-width: $first-level-media) {
+		padding: 0;
+		justify-content: left;
+	}
+
+	.content {
+		
+		animation-fill-mode: forwards;
+		animation-duration: .15s;
+
+		@media (max-width: $first-level-media) {
+			flex-grow: 1;
+		}
+		
+	}
+
+	.content.disappear {
+		animation-name: box-left-disappear;
+	}
+	
+	.content.appear {
+		animation-name: box-right-appear;
+	}
+
+	.content.hidden {
+		display: none;
+	}
+
+	nav {
+
+		@media (max-width: $first-level-media) {
+			min-width: auto;
+			padding: 0;
+		}
+		
+		min-width: 150px;
+		padding: 20px 0;
+
+		a {
+
+			display: block;
+			color: $unaccent-color;
+			padding: 15px 15px;
+			cursor: pointer;
+			transition: $std-transition;
+			font-weight: 500;
+			white-space: nowrap;
+			margin-right: 25px;
+			@include row-flex;
+			align-items: center;
+			
+			@media (max-width: $first-level-media) {
+				padding: 15px;
+				margin: 0;
+				text-align: center;
+			}			
+
+			@media (min-width: $first-level-media) {
+				@include box-rounding;
+			}
+			
+		}
+		
+		a.selected {
+			background: $accent-pale-color;
+			color: $accent-color;
+		}
+		
+		a.selected:hover {
+			color: $accent-darker-color;
+		}
+		
+		a.selected:active {
+			color: $accent-darker-color;
+		}
+
+		a.top-spacing {
+			margin-top: 3em;
+		}
+
+		span {
+
+			@media (max-width: $first-level-media) {
+				display: none;
+			}
+
+		}
+
+		a:hover {
+			color: $unaccent-darker-color;
+		}
+		
+		a:active {
+			color: $unaccent-dark-color;
+		}
+		
+		i {
+
+			font-size: 1.5em;
+			padding-right: 10px;
+
+			@media (max-width: $first-level-media) {
+				padding-right: 0;
+			}
+
+		}
+
+	}
+  
+	.playlist {
+		
+		margin-right: 30px;
+		cursor: pointer;
+		
+		&:last-child {
+			margin-right: 0;
+		}
+		
+		img {
+
+			width: 130px;
+			height: 130px;
+			display: block;
+			@include box-hard-shadowing;
+			@include box-rounding;
+			transition: $std-transition;
+			
+		}
+		
+		img:hover {
+			@include box-hard-darker-shadowing;
+		}
+		
+	}
+	
+}
+
+.audio-box {
+
+	cursor: pointer;
+	transition: $std-transition;
+	background: $light-color;
+	margin-bottom: 15px;
+	padding: 0;
+	@include box-rounding;
+	display: grid;
+	overflow: hidden;
+	
+	.h-row {
+		padding: 5px;
+		grid-column: 1;
+		grid-row: 1;
+	}
+	
+	.progress {
+		background: $accent-pale-color;
+		grid-column: 1;
+		grid-row: 1;
+		transition: $std-transition;
+	}
+	
+	&:last-child {
+		margin-bottom: 0;
+	}
+	
+	&:hover {
+		background: $opacity-color;
+	}
+
+	.play .fa-play {
+		@include show-toggle-button-icon;
+	}
+	
+	.pause .fa-pause {
+		@include show-toggle-button-icon;
+	}
+	
+	.info b {
+		padding-right: 10px;
+	}
+	
+}
