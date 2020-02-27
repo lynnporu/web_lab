@@ -21,6 +21,11 @@
 	width: max-content;
 	@include box-shadowing;
 	@include box-rounding;
+
+	@media (max-width: $first-level-media) {
+		border-radius: 0;
+	}
+
 }
 
 .box.center-w {
@@ -32,4 +37,8 @@
 		top: 5%;
 		bottom: 5%;
 	}
+}
+
+.light-shadow {
+	@include box-shadowing;
 }

@@ -3,6 +3,31 @@
 	flex-direction: column;
 }
 
+@mixin row-flex {
+	display: flex;
+	flex-direction: row;
+}
+
 .full-w-column {
 	@include column-flex;
+}
+
+.h-row {
+	@include row-flex;
+}
+
+.h-row.wrap-with-width {
+	
+	@media (max-width: $first-level-media) {
+		flex-wrap: wrap;
+	}
+
+}
+
+.space-between {
+	justify-content: space-between;
+}
+
+.center-aligning {
+	align-items: center;
 }

@@ -1,14 +1,39 @@
+@import 'box';
+
+@mixin show-toggle-button-icon {
+  opacity: 1;
+	z-index: 2;
+}
+
 @mixin button-behaviour {
+
+	padding: {
+		left: 20px;
+		right: 20px;
+	}
+	cursor: pointer;
+
+	&.opaque {
+		background: transparent;
+	}
 	
-	&, &.bordered:hover {
-		padding: {
-			left: 20px;
-			right: 20px;
-		}
+	&.toggle-icon {
+		display: grid;
+	}
+	
+	&.toggle-icon i {
+		grid-column: 1;
+		grid-row: 1;
+		opacity: 0;
+		z-index: 1;
+		transition: $std-transition;
+	}
+	
+	&:not(.opaque), &.bordered:hover {
 		background: $accent-color;
 		color: $main-color;
-		cursor: pointer;
-		box-shadow: 0 0 0 2px $accent-color inset;		
+		box-shadow: 0 0 0 2px $accent-color inset;
+		@include box-rounding;
 	}
 
 	&:hover, &.bordered {
@@ -17,7 +42,7 @@
 
 	}
 
-	&:not(.bordered):active {
+	&:not(.opaque):not(.bordered):active {
 		box-shadow: 0 0 0 4px $accent-color inset;
 	}
 
