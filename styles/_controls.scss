@@ -1,4 +1,43 @@
-input, button, input[type="submit"], input[type="reset"] {
+@mixin button-behaviour {
+	
+	&, &.bordered:hover {
+		padding: {
+			left: 20px;
+			right: 20px;
+		}
+		background: $accent-color;
+		color: $main-color;
+		cursor: pointer;
+		box-shadow: 0 0 0 2px $accent-color inset;		
+	}
+
+	&:hover, &.bordered {
+		background: transparent;
+		color: $accent-color;
+
+	}
+
+	&:not(.bordered):active {
+		box-shadow: 0 0 0 4px $accent-color inset;
+	}
+
+}
+
+@mixin text-input-behaviour {
+
+	box-shadow: 0 -2px 0 0 inset $opacity-color;		
+
+	&:hover {
+		box-shadow: 0 -2px 0 0 inset $opacity-darker-color;
+	}
+
+	&:focus {
+		box-shadow: 0 -2px 0 0 inset $accent-color;
+	}
+
+}
+
+input, button {
 	border: 0;
 	font: inherit;
 	transition: $std-transition;
@@ -9,33 +48,9 @@ input, button, input[type="submit"], input[type="reset"] {
 }
 
 button, input[type="submit"], input[type="reset"] {
-	padding: {
-		left: 20px;
-		right: 20px;
-	}
-	background: $accent-color;
-	color: $main-color;
-	cursor: pointer;
-	box-shadow: 0 0 0 2px $accent-color inset;
+	@include button-behaviour;
 }
 
-button:hover, input[type="submit"]:hover, input[type="reset"]:hover {
-	background: transparent;
-	color: $accent-color;
-}
-
-button:active, input[type="submit"]:active, input[type="reset"]:active {
-	box-shadow: 0 0 0 4px $accent-color inset;
-}
-
-input[type="text"] {
-	box-shadow: 0 -2px 0 0 inset $opacity-color;
-}
-
-input[type="text"]:hover {
-	box-shadow: 0 -2px 0 0 inset $opacity-darker-color;
-}
-
-input[type="text"]:focus {
-	box-shadow: 0 -2px 0 0 inset $accent-color;
+input[type="text"], input[type="password"]{
+	@include text-input-behaviour;
 }

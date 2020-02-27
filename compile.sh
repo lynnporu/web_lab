@@ -1,1 +1,1 @@
-scss styles/style.scss styles/style.css
+scss styles/style.scss styles/style.css --style=compressed
