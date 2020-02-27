@@ -6,6 +6,10 @@
 	box-shadow: 0 10px 40px 0 rgba(0, 0, 0, .2);
 }
 
+@mixin box-light-shadowing {
+	box-shadow: 0 10px 40px 0 rgba(0, 0, 0, .1);
+}
+
 @mixin box-hard-darker-shadowing {
 	box-shadow: 0 10px 40px 0 rgba(0, 0, 0, .3);
 }
