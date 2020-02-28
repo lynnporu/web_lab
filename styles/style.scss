@@ -30,12 +30,15 @@ h1, h2, h3 {
 }
 
 h1 {
-	
-	&:first-child {
-		margin: 20px 0 40px;
-	}
-	
 	margin: 40px 0 40px;
+}
+
+h1 + button {
+	display: inline;
+}
+
+button ~ h1 {
+	color: red;
 }
 
 @import "containers";

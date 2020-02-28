@@ -31,3 +31,19 @@
 .center-aligning {
 	align-items: center;
 }
+
+.header-button {
+	
+	@include row-flex;
+	margin-bottom: 40px;
+	align-items: center;
+	
+	&:not(:first-child) {
+		margin-top: 40px;
+	}
+  
+	h1 {
+		margin: 0 20px 0 0;
+	}
+  
+}
