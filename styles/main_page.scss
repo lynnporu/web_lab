@@ -147,6 +147,14 @@ aside {
 	
 }
 
+.playlist-edit {
+
+	.controls-row button {
+		margin-bottom: 15px;
+	}
+
+}
+
 .playlist-create {
 	
 	@include row-flex;
