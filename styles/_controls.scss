@@ -9,6 +9,18 @@
 	box-shadow: 0 -2px 0 0 inset $color;
 }
 
+@mixin bordered-button {
+	background: transparent;
+	color: $accent-color;
+}
+
+@mixin bordered-button-hover {
+	background: $accent-color;
+	color: $main-color;
+	box-shadow: 0 0 0 2px $accent-color inset;
+	@include box-rounding;
+}
+
 @mixin button-behaviour {
 
 	padding: {
@@ -34,15 +46,11 @@
 	}
 	
 	&:not(.opaque), &.bordered:hover {
-		background: $accent-color;
-		color: $main-color;
-		box-shadow: 0 0 0 2px $accent-color inset;
-		@include box-rounding;
+		@include bordered-button-hover;
 	}
 
 	&:hover, &.bordered {
-		background: transparent;
-		color: $accent-color;
+		@include bordered-button;
 	}
 	
 	&.disabled, &.disabled:hover, &.disabled:active {

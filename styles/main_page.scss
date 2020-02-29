@@ -1,5 +1,7 @@
 @import 'box';
 @import 'animations';
+@import 'containers';
+@import 'controls';
 
 #main-page {
 
@@ -126,6 +128,51 @@ aside {
 	
 	.info b {
 		padding-right: 10px;
+	}
+	
+}
+
+.playlist-info {
+	
+	@include row-flex;
+	align-items: start;
+	margin-bottom: 40px;
+	
+	img {
+
+		width: 180px;
+		height: 180px;
+		display: block;
+		margin-right: 30px;
+		@include box-hard-shadowing;
+		@include box-rounding;
+		transition: $std-transition;
+		
+	}
+	
+}
+
+.playlist-create {
+	
+	@include row-flex;
+	align-items: flex-start;
+	
+	.file {
+		margin-right: 40px;
+	}
+	
+	input[type="file"] + label {
+		@include bordered-button;
+		width: 180px;
+		height: 180px;
+		text-align: center;
+		display: table-cell;
+		vertical-align: middle;
+		padding: 0;
+	}
+	
+	input[type="file"] + label:hover {
+		@include bordered-button-hover;
 	}
 	
 }

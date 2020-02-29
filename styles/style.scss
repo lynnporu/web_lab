@@ -35,10 +35,17 @@ h1 {
 	margin: 40px 0 40px;
 }
 
-h1 + span, span.subheader {
-	display: block;
-	margin: -30px 0 40px;
+h1 + span, h2 + span, span.subheader {
+	display: block;	
 	color: $unaccent-color;
+}
+
+h1 + span, span.subheader {
+	margin: -30px 0 40px;
+}
+
+h2 + span {
+	margin: -5px 0 40px;
 }
 
 .top-spacing {
@@ -47,6 +54,10 @@ h1 + span, span.subheader {
 
 .break-line {
 	display: block;
+}
+
+.inline-icon {
+	padding: 0 10px;
 }
 
 p {

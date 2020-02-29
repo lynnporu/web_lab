@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<title>Плейлист</title>
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link rel="stylesheet" type="text/css" href="styles/fontawesome.css">
+	<meta charset="utf-8">
+</head>
+<body id="main-page">
+	<aside>
+		<nav>
+			<a>
+				<i class="fas fa-magic"></i><span>Огляд</span>
+			</a>
+			<a>
+				<i class="fas fa-list"></i><span>Плейлисти</span>
+			</a>
+			<a>
+				<i class="fas fa-music"></i><span>Музика</span>
+			</a>
+			<a class="top-spacing">
+				<i class="fas fa-cogs"></i><span>Налаштування</span>
+			</a>
+		</nav>
+	</aside>
+	<div class="content-wrapper">
+		<div class="player h-row playing space-between hidden">
+			<div class="h-row center-aligning">
+				<button class="opaque play toggle-icon">
+					<i class="fas fa-play"></i>
+					<i class="fas fa-pause"></i>
+				</button>
+				<div class="info">
+					<b>Oak Island</b>
+					<span>Ra</span>
+				</div>
+			</div>
+			<div class="progress">
+				<div class="bullet"></div>
+			</div>
+			<div class="h-row center-aligning">
+				<span class="duration">02:57</span>
+				<button class="opaque">
+					<i class="fas fa-ellipsis-h"></i>
+				</button>
+			</div>
+		</div>
+		<div class="content box appear" id="playlist">
+			<div class="playlist-info">
+				<img src="imgs/playlist.jpg" alt="Обкладинка плейлисту Сонячний день">
+				<div class="info">
+					<h2>Сонячний день</h2>
+					<span>Автор: Username, 28 записів</span>
+					<div class="h-row button-row">
+						<button class="bordered">Редагувати</button>
+						<button class="bordered"><i class="fas fa-share-alt"></i></button>
+					</div>
+				</div>
+			</div>
+			<div class="full-w-row">
+				<div class="audio-box no-playing h-row space-between">
+					<div class="h-row center-aligning">
+						<button class="opaque play toggle-icon">
+							<i class="fas fa-play"></i>
+							<i class="fas fa-pause"></i>
+						</button>
+						<div class="info">
+							<b>Magiia</b>
+							<span>5 Vymir</span>
+						</div>
+					</div>
+					<div class="h-row center-aligning">
+						<span class="duration">02:57</span>
+						<button class="opaque">
+							<i class="fas fa-ellipsis-h"></i>
+						</button>
+					</div>
+				</div>
+				<div class="audio-box h-row space-between playing">
+					<div class="h-row center-aligning">
+						<button class="opaque play toggle-icon">
+							<i class="fas fa-play"></i>
+							<i class="fas fa-pause"></i>
+						</button>
+						<div class="info">
+							<b>Oak Island</b>
+							<span>Ra</span>
+						</div>
+					</div>
+					<div class="h-row center-aligning">
+						<span class="duration">02:57</span>
+						<button class="opaque">
+							<i class="fas fa-ellipsis-h"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+			<h1>Перетини з цим плейлистом</h1>
+			<div class="h-row wrap-with-width">
+				<div class="playlist">
+					<img src="imgs/playlist4.jpg" alt="Обкладинка плейлисту Повільний джаз">
+					<h3>Зелений апельсин</h3>
+				</div>
+				<div class="playlist">
+					<img src="imgs/playlist1.jpeg" alt="Обкладинка плейлисту Інді рулить">
+					<h3>Інді рулить</h3>
+				</div>
+				<div class="playlist">
+					<img src="imgs/playlist2.jpg" alt="Обкладинка плейлисту Повільний джаз">
+					<h3>Повільний джаз</h3>
+				</div>
+				<div class="playlist">
+					<img src="imgs/playlist3.jpeg" alt="Обкладинка плейлисту Вихідні">
+					<h3>Вихідні</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
