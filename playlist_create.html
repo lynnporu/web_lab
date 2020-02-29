@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<title>Створити плейлист</title>
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link rel="stylesheet" type="text/css" href="styles/fontawesome.css">
+	<meta charset="utf-8">
+</head>
+<body id="main-page">
+	<aside>
+		<nav>
+			<a>
+				<i class="fas fa-magic"></i><span>Огляд</span>
+			</a>
+			<a>
+				<i class="fas fa-list"></i><span>Плейлисти</span>
+			</a>
+			<a>
+				<i class="fas fa-music"></i><span>Музика</span>
+			</a>
+			<a class="top-spacing">
+				<i class="fas fa-cogs"></i><span>Налаштування</span>
+			</a>
+		</nav>
+	</aside>
+	<div class="content-wrapper">
+		<div class="player h-row playing space-between hidden">
+			<div class="h-row center-aligning">
+				<button class="opaque play toggle-icon">
+					<i class="fas fa-play"></i>
+					<i class="fas fa-pause"></i>
+				</button>
+				<div class="info">
+					<b>Oak Island</b>
+					<span>Ra</span>
+				</div>
+			</div>
+			<div class="progress">
+				<div class="bullet"></div>
+			</div>
+			<div class="h-row center-aligning">
+				<span class="duration">02:57</span>
+				<button class="opaque">
+					<i class="fas fa-ellipsis-h"></i>
+				</button>
+			</div>
+		</div>
+		<div class="content box appear" id="playlist_create">
+			<h1>Створити плейлист</h1>
+			<div class="playlist-create">
+				<div class="file">
+					<input type="file" id="file-playlist-create" tabindex="2">
+					<label for="file-playlist-create">Додайте фото</label>
+				</div>
+				</label>
+				<input type="text" placeholder="Назва плейлисту" tabindex="1" autofocus>
+			</div>
+			<p>Ви зможете наповнювати плейлист кнопкою <i class="fas fa-plus inline-icon"></i> біля запису.</p>
+			<button>Закінчити</button>
+		</div>
+	</div>
+</body>
+</html>
