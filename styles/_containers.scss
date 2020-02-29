@@ -24,6 +24,10 @@
 
 }
 
+.h-row.allow-wrapping{
+	flex-wrap: wrap;
+}
+
 .space-between {
 	justify-content: space-between;
 }
