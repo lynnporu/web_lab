@@ -16,12 +16,16 @@
 	@include row-flex;
 }
 
-.h-row.wrap-with-width {
+.h-row.wrap-with-width, .header-buttons.wrap-with-width {
 	
 	@media (max-width: $first-level-media) {
 		flex-wrap: wrap;
 	}
 
+}
+
+.h-row .grow-wrapper, .header-buttons .grow-wrapper {
+	flex-grow: 1;
 }
 
 .h-row.allow-wrapping{
@@ -36,7 +40,7 @@
 	align-items: center;
 }
 
-.header-button {
+.header-buttons {
 	
 	@include row-flex;
 	margin-bottom: 40px;

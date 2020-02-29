@@ -20,7 +20,7 @@
 		animation-duration: .15s;
 
 		@media (min-width: $first-level-media) {
-			min-width: 610px;
+			width: 610px;
 		}
 
 		@media (max-width: $first-level-media) {

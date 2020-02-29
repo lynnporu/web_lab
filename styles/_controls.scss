@@ -90,6 +90,8 @@ input[type="text"], input[type="password"]{
 }
 
 input.search {
+
+	transition: $std-transition;
 	
 	&.floated {
 
@@ -97,11 +99,15 @@ input.search {
 			float: right;
 		}
 
-		margin: 40px 0;
 		width: 200px;
+
+	}
+
+	&.floated.with-margin {
+		margin: 40px 0;
 	}
 	
-	&.floated:focus, &.floated:valid {
+	&:focus, &:valid {
 		width: 300px;
 	}
 	
@@ -109,4 +115,12 @@ input.search {
 		@include input-bottom-border($accent-color);
 	}
 	
+}
+
+.button-row {
+
+	button:not(:last-child) {
+		margin-right: 15px;
+	}
+
 }

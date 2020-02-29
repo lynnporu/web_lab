@@ -34,14 +34,10 @@ h1 {
 	margin: 40px 0 40px;
 }
 
-h1 + span {
+h1 + span, span.subheader {
 	display: block;
 	margin: -30px 0 40px;
 	color: $unaccent-color;
-}
-
-button ~ h1 {
-	color: red;
 }
 
 @import "containers";
