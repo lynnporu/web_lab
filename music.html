@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<title>Плейлисти</title>
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link rel="stylesheet" type="text/css" href="styles/fontawesome.css">
+	<meta charset="utf-8">
+</head>
+<body id="main-page">
+	<aside>
+		<nav>
+			<a>
+				<i class="fas fa-magic"></i><span>Огляд</span>
+			</a>
+			<a>
+				<i class="fas fa-list"></i><span>Плейлисти</span>
+			</a>
+			<a class="selected">
+				<i class="fas fa-music"></i><span>Музика</span>
+			</a>
+			<a class="top-spacing">
+				<i class="fas fa-cogs"></i><span>Налаштування</span>
+			</a>
+		</nav>
+	</aside>
+	<div class="content box appear" id="playlists">
+		<input class="search floated" type="text" placeholder="Пошук" required>
+		<h1>Моя музика</h1>
+		<span>Тут музика з усіх ваших плейлистів: 805 записів</span>
+		<div class="audio-box h-row space-between">
+			<div class="h-row center-aligning">
+				<button class="opaque play toggle-icon">
+					<i class="fas fa-play"></i>
+					<i class="fas fa-pause"></i>
+				</button>
+				<div class="info">
+					<b>Magiia</b>
+					<span>5 Vymir</span>
+				</div>
+			</div>
+			<div class="h-row center-aligning">
+				<span class="duration">02:57</span>
+				<button class="opaque dots">
+					<i class="fas fa-ellipsis-h"></i>
+				</button>
+			</div>
+		</div>
+		<div class="audio-box h-row space-between">
+			<div class="h-row center-aligning">
+				<button class="opaque play toggle-icon">
+					<i class="fas fa-play"></i>
+					<i class="fas fa-pause"></i>
+				</button>
+				<div class="info">
+					<b>F W T S L M</b>
+					<span>True Widow</span>
+				</div>
+			</div>
+			<div class="h-row center-aligning">
+				<span class="duration">03:48</span>
+				<button class="opaque dots">
+					<i class="fas fa-ellipsis-h"></i>
+				</button>
+			</div>
+		</div>
+		<div class="audio-box h-row space-between">
+			<div class="h-row center-aligning">
+				<button class="opaque play toggle-icon">
+					<i class="fas fa-play"></i>
+					<i class="fas fa-pause"></i>
+				</button>
+				<div class="info">
+					<b>Sky Is Over</b>
+					<span>Serj Tankian</span>
+				</div>
+			</div>
+			<div class="h-row center-aligning">
+				<span class="duration">04:02</span>
+				<button class="opaque dots">
+					<i class="fas fa-ellipsis-h"></i>
+				</button>
+			</div>
+		</div>
+		<button>Завантажити ще</button>
+	</div>
+</body>
+</html>
