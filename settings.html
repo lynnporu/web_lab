@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<title>Плейлист</title>
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link rel="stylesheet" type="text/css" href="styles/fontawesome.css">
+	<meta charset="utf-8">
+</head>
+<body id="main-page">
+	<aside>
+		<nav>
+			<a>
+				<i class="fas fa-magic"></i><span>Огляд</span>
+			</a>
+			<a>
+				<i class="fas fa-list"></i><span>Плейлисти</span>
+			</a>
+			<a>
+				<i class="fas fa-music"></i><span>Музика</span>
+			</a>
+			<a class="top-spacing">
+				<i class="fas fa-cogs"></i><span>Налаштування</span>
+			</a>
+		</nav>
+	</aside>
+	<div class="content-wrapper">
+		<div class="player h-row playing space-between hidden">
+			<div class="h-row center-aligning">
+				<button class="opaque play toggle-icon">
+					<i class="fas fa-play"></i>
+					<i class="fas fa-pause"></i>
+				</button>
+				<div class="info">
+					<b>Oak Island</b>
+					<span>Ra</span>
+				</div>
+			</div>
+			<div class="progress">
+				<div class="bullet"></div>
+			</div>
+			<div class="h-row center-aligning">
+				<span class="duration">02:57</span>
+				<button class="opaque">
+					<i class="fas fa-ellipsis-h"></i>
+				</button>
+			</div>
+		</div>
+		<div class="content box appear" id="playlist">
+			<h1>Налаштування</h1>
+			<p>Тут ви можете змінити інформацію про себе.</p>
+			<input type="text" placeholder="Логін" class="long-in-column" tabindex="1" autofocus><br>
+			<input type="text" placeholder="Пароль" class="long-in-column" tabindex="2" autofocus><br>
+			<input type="text" placeholder="Підтвердження пароля" class="long-in-column" tabindex="3" autofocus><br>
+			<button class="top-spacing">Зберегти</button>
+			<p>Вихід завершить сеанс лише на цьому пристрої.</p>
+			<button class="bordered">Вийти</button>
+		</div>
+	</div>
+</body>
+</html>

@@ -36,13 +36,6 @@
 	margin: auto;
 }
 
-.box.spacing-h {
-	margin: {
-		top: 5%;
-		bottom: 5%;
-	}
-}
-
 .light-shadow {
 	@include box-shadowing;
 }
