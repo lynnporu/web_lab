@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<title>Завантаження</title>
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link rel="stylesheet" type="text/css" href="styles/fontawesome.css">
+	<meta charset="utf-8">
+</head>
+<body id="main-page">
+	<aside>
+		<nav>
+			<a>
+				<i class="fas fa-magic"></i><span>Огляд</span>
+			</a>
+			<a>
+				<i class="fas fa-list"></i><span>Плейлисти</span>
+			</a>
+			<a>
+				<i class="fas fa-music"></i><span>Музика</span>
+			</a>
+			<a class="top-spacing">
+				<i class="fas fa-cogs"></i><span>Налаштування</span>
+			</a>
+		</nav>
+	</aside>
+	<div class="content box appear" id="upload">
+		<h1>Завантажити запис</h1>
+		<p>Ви можете завантажити запис, якщо володієте відповідними авторськими правами, або він перебуває у вільному доступі.</p>
+		<div class="h-row input-row">
+			<input type="text" placeholder="Виконавець" tabindex="1" autofocus>
+			<input type="text" placeholder="Назва запису" tabindex="2">
+		</div>
+		<p>Додайте файл у форматі .mp3, .wav, .ogg або .mp4 розміром не більше 15 мб.</p>
+		<input type="file" id="file-audio">
+		<label for="file-audio" tabindex="3">Обрати файл</label>
+		<button class="disabled break-line top-spacing">Завершити</button>
+	</div>
+</body>
+</html>

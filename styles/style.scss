@@ -40,6 +40,18 @@ h1 + span, span.subheader {
 	color: $unaccent-color;
 }
 
+.top-spacing {
+	margin-top: 3em;
+}
+
+.break-line {
+	display: block;
+}
+
+p {
+	margin: 3em 0;
+}
+
 @import "containers";
 @import "controls";
 @import "box";
