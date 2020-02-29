@@ -102,7 +102,7 @@ button, input[type="submit"], input[type="reset"], input[type="file"] + label {
 	@include button-behaviour;
 }
 
-input[type="text"], input[type="password"]{
+input[type="text"], input[type="password"], input[type="email"]{
 	@include text-input-behaviour;
 }
 
@@ -119,6 +119,11 @@ input[type="file"] {
 input.long-in-column {
 	margin-bottom: 25px;
 	width: 80%;
+}
+
+input.max-long-in-column {
+	width: 100%;
+	margin-bottom: 25px;
 }
 
 input.search {
@@ -149,9 +154,9 @@ input.search {
 	
 }
 
-.button-row {
+.controls-row {
 
-	button:not(:last-child) {
+	*:not(:last-child) {
 		margin-right: 15px;
 	}
 

@@ -4,6 +4,14 @@
 
 	h1 {font-family: Comfortaa;}
 
-	input {margin: 5px 0;}
+	@media (max-width: $first-level-media) {
+
+		padding: 0;
+
+		.box {
+			width: auto;
+		}
+
+	}
 
 }
