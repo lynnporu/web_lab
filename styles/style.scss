@@ -4,6 +4,7 @@ $black-text-color:			#333;
 $main-color:				white;
 $accent-color:				blue;
 $accent-pale-color:			#00f2;
+$accent-pale-darker-color: #11f3;
 $accent-darker-color:		#00d;
 $unaccent-color:			#667d;
 $unaccent-darker-color:		#667f;
@@ -31,6 +32,12 @@ h1, h2, h3 {
 
 h1 {
 	margin: 40px 0 40px;
+}
+
+h1 + span {
+	display: block;
+	margin: -30px 0 40px;
+	color: $unaccent-color;
 }
 
 button ~ h1 {

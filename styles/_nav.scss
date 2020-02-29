@@ -39,7 +39,8 @@ nav {
 	}
 	
 	a.selected:hover {
-		color: $accent-darker-color;
+		background: $accent-pale-darker-color;
+		color: $accent-color;
 	}
 	
 	a.selected:active {

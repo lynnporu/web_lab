@@ -56,6 +56,11 @@
 
 	@include input-bottom-border($opacity-color);
 
+	&::placeholder {
+		opacity: 1;
+		color: $unaccent-color;
+	}
+	
 	&:hover {
 		@include input-bottom-border($opacity-darker-color);
 	}

@@ -81,21 +81,20 @@ aside {
 	background: $light-color;
 	margin-bottom: 15px;
 	padding: 0;
+	padding: 10px;
 	@include box-rounding;
-	display: grid;
-	overflow: hidden;
 	
-	.h-row {
-		padding: 5px;
-		grid-column: 1;
-		grid-row: 1;
+	&.playing {
+		background: $accent-pale-color;
+		color: $accent-color;
 	}
 	
-	.progress {
-		background: $accent-pale-color;
-		grid-column: 1;
-		grid-row: 1;
-		transition: $std-transition;
+	&.playing:hover {
+		background: $accent-pale-darker-color;
+	}
+	
+	&.playing button.opaque {
+		color: $accent-color;
 	}
 	
 	&:last-child {
