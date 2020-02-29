@@ -79,3 +79,21 @@ button, input[type="submit"], input[type="reset"] {
 input[type="text"], input[type="password"]{
 	@include text-input-behaviour;
 }
+
+input.search {
+	
+	&.floated {
+  	float: right;
+	  margin: 40px 0;
+		width: 200px;
+	}
+	
+	&.floated:focus, &.floated:valid {
+		width: 300px;
+	}
+	
+	&:valid {
+		box-shadow: 0 -2px 0 0 inset $accent-color;
+	}
+	
+}
