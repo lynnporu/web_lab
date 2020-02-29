@@ -5,6 +5,10 @@
 	z-index: 2;
 }
 
+@mixin input-bottom-border($color) {
+	box-shadow: 0 -2px 0 0 inset $color;
+}
+
 @mixin button-behaviour {
 
 	padding: {
@@ -50,14 +54,14 @@
 
 @mixin text-input-behaviour {
 
-	box-shadow: 0 -2px 0 0 inset $opacity-color;		
+	@include input-bottom-border($opacity-color);
 
 	&:hover {
-		box-shadow: 0 -2px 0 0 inset $opacity-darker-color;
+		@include input-bottom-border($opacity-darker-color);
 	}
 
 	&:focus {
-		box-shadow: 0 -2px 0 0 inset $accent-color;
+		@include input-bottom-border($accent-color);
 	}
 
 }
@@ -83,8 +87,12 @@ input[type="text"], input[type="password"]{
 input.search {
 	
 	&.floated {
-  	float: right;
-	  margin: 40px 0;
+
+		@media (min-width: $first-level-media) {
+			float: right;
+		}
+
+		margin: 40px 0;
 		width: 200px;
 	}
 	
@@ -93,7 +101,7 @@ input.search {
 	}
 	
 	&:valid {
-		box-shadow: 0 -2px 0 0 inset $accent-color;
+		@include input-bottom-border($accent-color);
 	}
 	
 }
