@@ -33,10 +33,6 @@ h1 {
 	margin: 40px 0 40px;
 }
 
-h1 + button {
-	display: inline;
-}
-
 button ~ h1 {
 	color: red;
 }
@@ -44,6 +40,7 @@ button ~ h1 {
 @import "containers";
 @import "controls";
 @import "box";
+@import "nav";
 
 @import "screen_login";
 @import "main_page";
