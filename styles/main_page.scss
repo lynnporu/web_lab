@@ -14,19 +14,24 @@
 		justify-content: left;
 	}
 
-	.content {
-		
-		animation-fill-mode: forwards;
-		animation-duration: .15s;
-
-		@media (min-width: $first-level-media) {
-			width: 610px;
-		}
+	.content-wrapper {
 
 		@media (max-width: $first-level-media) {
 			flex-grow: 1;
 		}
+
+		@media (min-width: $first-level-media) {
+			width: 690px;
+		}
 		
+	}
+
+	.content {
+
+		width: auto;
+		animation-fill-mode: forwards;
+		animation-duration: .15s;
+
 	}
 
 	.content.disappear {
@@ -85,8 +90,22 @@ aside {
 	@include box-rounding;
 	
 	&.playing {
+
 		background: $accent-pale-color;
 		color: $accent-color;
+
+		.fa-pause {
+			@include show-toggle-button-icon;
+		}
+
+	}
+
+	&.no-playing {
+
+		.fa-play {
+			@include show-toggle-button-icon;
+		}
+
 	}
 	
 	&.playing:hover {
@@ -103,14 +122,6 @@ aside {
 	
 	&:hover {
 		background: $opacity-color;
-	}
-
-	.play .fa-play {
-		@include show-toggle-button-icon;
-	}
-	
-	.pause .fa-pause {
-		@include show-toggle-button-icon;
 	}
 	
 	.info b {

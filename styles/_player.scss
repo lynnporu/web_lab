@@ -1,0 +1,76 @@
+@import "box";
+@import "controls";
+
+.player {
+
+	padding: 20px 20px;
+	@include box-rounding;
+	margin-bottom: 25px;
+	box-shadow: 3px 3px 20px 0 $accent-medium-color;
+ 	background: $accent-color;
+	color: white;
+	position: sticky;
+	top: 20px;
+	z-index: 1;
+
+	@media (max-width: $first-level-media) {
+		border-radius: 0;
+		top: 0;
+		margin: 0;
+		box-shadow: none;
+	}
+	
+	button.opaque {
+		color: white;
+	}
+	
+	.info {
+
+		span, b {
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+			width: 90px;
+			display: block;
+		}
+		
+	}
+	
+	.progress {
+		height: 2px;
+		background: white;
+		flex-grow: 1;
+		margin: 0 15px;
+		align-self: center;
+		position: relative;
+	}
+	
+	.bullet {
+		width: 15px;
+		height: 15px;
+		background: $accent-color;
+		box-shadow: 0 0 0 2px white inset;
+		border-radius: 100%;
+		transform: translateY(-7px);
+		cursor: pointer;
+		transition: $std-transition;
+		position: absolute;
+	}
+	
+	.bullet:hover {
+		box-shadow: 0 0 0 3px white inset;
+	}
+	
+	.bullet:active {
+		background: white;
+	}
+	
+}
+
+.player.playing .fa-pause {
+	@include show-toggle-button-icon;
+}
+
+.player.no-playing .fa-play {
+	@include show-toggle-button-icon;
+}

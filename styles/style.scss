@@ -5,6 +5,7 @@ $main-color:				white;
 $accent-color:				blue;
 $accent-pale-color:			#00f2;
 $accent-pale-darker-color: #11f3;
+$accent-medium-color:   #00f8;
 $accent-darker-color:		#00d;
 $unaccent-color:			#667d;
 $unaccent-darker-color:		#667f;
@@ -56,6 +57,7 @@ p {
 @import "controls";
 @import "box";
 @import "nav";
+@import "player";
 
 @import "screen_login";
 @import "main_page";
