@@ -1,2 +1,2 @@
-scss styles/style.scss styles/style.css --style=compressed
-scss styles/fontawesome.scss styles/fontawesome.css
+scss scss/style.scss css/style.css --style=compressed
+scss scss/fontawesome.scss css/fontawesome.css
