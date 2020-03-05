@@ -156,7 +156,7 @@ input.search {
 
 .controls-row {
 
-	*:not(:last-child) {
+	& > *:not(:last-child) {
 		margin-right: 15px;
 	}
 

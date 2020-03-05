@@ -11,38 +11,6 @@
 		justify-content: left;
 	}
 
-	.content-wrapper {
-
-		@media (max-width: $first-level-media) {
-			flex-grow: 1;
-		}
-
-		@media (min-width: $first-level-media) {
-			width: 690px;
-		}
-		
-	}
-
-	.content {
-
-		width: auto;
-		animation-fill-mode: forwards;
-		animation-duration: .15s;
-
-	}
-
-	.content.disappear {
-		animation-name: box-left-disappear;
-	}
-	
-	.content.appear {
-		animation-name: box-right-appear;
-	}
-
-	.content.hidden {
-		display: none;
-	}
-
 }
 
 aside {
