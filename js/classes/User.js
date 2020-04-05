@@ -1,7 +1,12 @@
 class User {
 
 	constructor(data) {
+
 		this.changeData(data);
+
+		this.deleteCookies();
+		this.storeInCookies();
+
 	}
 
 	changeData(newData) {
@@ -10,6 +15,40 @@ class User {
 			key => this[key] = newData[key])
 
 	};
+
+	/*Check whether the session is stored in cookies and returns
+	* instance of User or `false` otherwise. */
+	static loadByCookies() {
+
+		let cookie = CookieJar.grab('session');
+
+		return !cookie
+			? false
+			: new User(cookie);
+
+	}
+
+	storeInCookies() {
+		
+		CookieJar.put(
+			'session',
+			{
+				'access_token': this.access_token,
+				'relogin_token': this.relogin_token,
+				'user': this.user
+			},
+			{
+				'max-age': this.expire
+			}
+		);
+
+	}
+
+	deleteCookies() {
+
+		CookieJar.destroy('session');
+
+	}
 
 	static async byLogin(login, password) {
 
@@ -84,6 +123,8 @@ class User {
 		delete this.access_token;
 		delete this.user;
 		delete this.expire;
+
+		this.deleteCookies();
 
 	}
 
