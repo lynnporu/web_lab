@@ -1,0 +1,163 @@
+@mixin show-toggle-button-icon {
+	opacity: 1;
+	z-index: 2;
+}
+
+@mixin input-bottom-border($color) {
+	box-shadow: 0 -2px 0 0 inset $color;
+}
+
+@mixin bordered-button {
+	background: transparent;
+	color: $accent-color;
+}
+
+@mixin bordered-button-hover {
+	background: $accent-color;
+	color: $main-color;
+	box-shadow: 0 0 0 2px $accent-color inset;
+	@include box-rounding;
+}
+
+@mixin button-behaviour {
+
+	padding: {
+		left: 20px;
+		right: 20px;
+	}
+	cursor: pointer;
+
+	&.opaque {
+		background: transparent;
+	}
+	
+	&.toggle-icon {
+		display: grid;
+	}
+	
+	&.toggle-icon i {
+		grid-column: 1;
+		grid-row: 1;
+		opacity: 0;
+		z-index: 1;
+		transition: $std-transition;
+	}
+	
+	&:not(.opaque), &.bordered:hover {
+		@include bordered-button-hover;
+	}
+
+	&:hover, &.bordered {
+		@include bordered-button;
+	}
+	
+	&.disabled, &.disabled:hover, &.disabled:active {
+		cursor: default;
+		background: transparent;
+		color: $unaccent-color;
+		box-shadow: 0 0 0 2px $unaccent-color inset;
+	}
+
+	&:not(.opaque):not(.bordered):active {
+		box-shadow: 0 0 0 4px $accent-color inset;
+	}
+
+}
+
+@mixin text-input-behaviour {
+
+	@include input-bottom-border($opacity-color);
+
+	&::placeholder {
+		opacity: 1;
+		color: $unaccent-color;
+	}
+	
+	&:hover {
+		@include input-bottom-border($opacity-darker-color);
+	}
+
+	&:focus {
+		@include input-bottom-border($accent-color);
+	}
+
+}
+
+input, button, input[type="file"] + label {
+	border: 0;
+	font: inherit;
+	transition: $std-transition;
+	padding: {
+		top: 10px;
+		bottom: 10px;
+	}
+}
+
+input[type="file"]:focus + label {
+	outline: 1px dotted #000;
+	outline: -webkit-focus-ring-color auto 5px;
+}
+
+button, input[type="submit"], input[type="reset"], input[type="file"] + label {
+	@include button-behaviour;
+}
+
+input[type="text"], input[type="password"], input[type="email"]{
+	@include text-input-behaviour;
+}
+
+input[type="file"] {
+	position: absolute;
+	width: .1px;
+	height: .1px;
+	opacity: 1;
+	z-index: -1;
+	overflow: hidden;
+	outline: none;
+}
+
+input.long-in-column {
+	margin-bottom: 25px;
+	width: 80%;
+}
+
+input.max-long-in-column {
+	width: 100%;
+	margin-bottom: 25px;
+}
+
+input.search {
+
+	transition: $std-transition;
+	
+	&.floated {
+
+		@media (min-width: $first-level-media) {
+			float: right;
+		}
+
+		width: 200px;
+
+	}
+
+	&.floated.with-margin {
+		margin: 40px 0;
+	}
+	
+	&:focus, &:valid {
+		width: 300px;
+	}
+	
+	&:valid {
+		@include input-bottom-border($accent-color);
+	}
+	
+}
+
+.controls-row {
+
+	& > *:not(:last-child) {
+		margin-right: 15px;
+	}
+
+}

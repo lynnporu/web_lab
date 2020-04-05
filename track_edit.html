@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<title>Музика</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/fontawesome.css">
+	<meta charset="utf-8">
+</head>
+<body id="main-page">
+	<aside>
+		<nav>
+			<a>
+				<i class="fas fa-magic"></i><span>Огляд</span>
+			</a>
+			<a>
+				<i class="fas fa-list"></i><span>Плейлисти</span>
+			</a>
+			<a class="selected">
+				<i class="fas fa-music"></i><span>Музика</span>
+			</a>
+			<a class="top-spacing">
+				<i class="fas fa-cogs"></i><span>Налаштування</span>
+			</a>
+		</nav>
+	</aside>
+	<div class="content-wrapper">
+		<div class="player h-row playing space-between hidden">
+			<div class="h-row center-aligning">
+				<button class="opaque play toggle-icon">
+					<i class="fas fa-play"></i>
+					<i class="fas fa-pause"></i>
+				</button>
+				<div class="info">
+					<b>Oak Island</b>
+					<span>Ra</span>
+				</div>
+			</div>
+			<div class="progress">
+				<div class="bullet"></div>
+			</div>
+			<div class="h-row center-aligning">
+				<span class="duration">02:57</span>
+				<button class="opaque">
+					<i class="fas fa-ellipsis-h"></i>
+				</button>
+			</div>
+		</div>
+		<div class="content box appear" id="music">
+			<h1>Редагувати запис</h1>
+			<div class="h-row controls-row">
+				<input type="text" placeholder="Виконавець" value="5 Vymir" tabindex="1" autofocus>
+				<input type="text" placeholder="Назва запису" value="Magiia" tabindex="2">
+			</div>
+			<div class="audio-box h-row space-between top-spacing no-playing">
+					<div class="h-row center-aligning">
+						<button class="opaque play toggle-icon">
+							<i class="fas fa-play"></i>
+							<i class="fas fa-pause"></i>
+						</button>
+						<div class="info">
+							<b>Magiia</b>
+							<span>5 Vymir</span>
+						</div>
+					</div>
+					<div class="h-row center-aligning">
+						<span class="duration">02:57</span>
+						<button class="opaque">
+							<i class="fas fa-ellipsis-h"></i>
+						</button>
+					</div>
+			</div>
+			<p>Якщо ви видалите цей запис, його більше не існуватиме на сервері і у всіх плейлистах, де він включений.</p>
+			<div class="h-row controls-row top-spacing">
+				<button tabindex="3">Зберегти</button>
+				<button class="bordered" tabindex="4">Видалити запис</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

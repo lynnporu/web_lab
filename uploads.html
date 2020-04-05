@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<title>Завантаження</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/fontawesome.css">
+	<meta charset="utf-8">
+</head>
+<body id="main-page">
+	<aside>
+		<nav>
+			<a>
+				<i class="fas fa-magic"></i><span>Огляд</span>
+			</a>
+			<a>
+				<i class="fas fa-list"></i><span>Плейлисти</span>
+			</a>
+			<a>
+				<i class="fas fa-music"></i><span>Музика</span>
+			</a>
+			<a class="top-spacing">
+				<i class="fas fa-cogs"></i><span>Налаштування</span>
+			</a>
+		</nav>
+	</aside>
+	<div class="content-wrapper">
+		<div class="player h-row playing space-between hidden">
+			<div class="h-row center-aligning">
+				<button class="opaque play toggle-icon">
+					<i class="fas fa-play"></i>
+					<i class="fas fa-pause"></i>
+				</button>
+				<div class="info">
+					<b>Oak Island</b>
+					<span>Ra</span>
+				</div>
+			</div>
+			<div class="progress">
+				<div class="bullet"></div>
+			</div>
+			<div class="h-row center-aligning">
+				<span class="duration">02:57</span>
+				<button class="opaque">
+					<i class="fas fa-ellipsis-h"></i>
+				</button>
+			</div>
+		</div>
+		<div class="content box appear" id="playlists">
+			<input class="search floated with-margin" type="text" placeholder="Пошук" required>
+			<h1>Мої завантаження</h1>
+			<span>Ви завантажили 104 записи.</span>
+			<div class="audio-box h-row space-between no-playing">
+				<div class="h-row center-aligning">
+					<button class="opaque play toggle-icon">
+						<i class="fas fa-play"></i>
+						<i class="fas fa-pause"></i>
+					</button>
+					<div class="info">
+						<b>Magiia</b>
+						<span>5 Vymir</span>
+					</div>
+				</div>
+				<div class="h-row center-aligning">
+					<span class="duration">02:57</span>
+					<button class="opaque">
+						<i class="fas fa-times"></i>
+					</button>
+				</div>
+			</div>
+			<div class="audio-box h-row space-between no-playing">
+				<div class="h-row center-aligning">
+					<button class="opaque play toggle-icon">
+						<i class="fas fa-play"></i>
+						<i class="fas fa-pause"></i>
+					</button>
+					<div class="info">
+						<b>F W T S L M</b>
+						<span>True Widow</span>
+					</div>
+				</div>
+				<div class="h-row center-aligning">
+					<span class="duration">03:48</span>
+					<button class="opaque">
+						<i class="fas fa-times"></i>
+					</button>
+				</div>
+			</div>
+			<div class="audio-box h-row space-between no-playing">
+				<div class="h-row center-aligning">
+					<button class="opaque play toggle-icon">
+						<i class="fas fa-play"></i>
+						<i class="fas fa-pause"></i>
+					</button>
+					<div class="info">
+						<b>Sky Is Over</b>
+						<span>Serj Tankian</span>
+					</div>
+				</div>
+				<div class="h-row center-aligning">
+					<span class="duration">04:02</span>
+					<button class="opaque">
+						<i class="fas fa-times"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
