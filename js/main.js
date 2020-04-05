@@ -1,0 +1,1 @@
+const loader = new Loader('http://localhost:8080/api/v1/');
