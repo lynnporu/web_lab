@@ -1,19 +1,26 @@
 class Loader {
 
 	constructor(server_uri) {
+
 		this.server_uri = server_uri;
+
 	}
 
 	call(method, url, query_params) {
+
 		return new Promise((resolve, reject) => {
+
 			let request = new XMLHttpRequest();
+
 			request.open(
 				method.toUpperCase(),
 				this.server_uri + url + (query_params ? '?' : '') +
 				Object.keys(query_params).map(
 					key => `${key}=${query_params[key]}`).join('&'),
 				true);
+
 			request.onreadystatechange = event => {
+
 				/*Server will always return
 				  {status: 'ok', response: ...}
 				  or
@@ -23,9 +30,13 @@ class Loader {
 					if (result.status == 'ok') resolve(result.response);
 					else reject(result.response);
 				}
+
 			}
+
 			request.send();
+
 		});
+
 	}
 
 }
