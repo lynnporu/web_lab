@@ -8,12 +8,12 @@
 }
 
 @mixin bordered-button {
-	background: transparent;
+	background-color: transparent;
 	color: $accent-color;
 }
 
 @mixin bordered-button-hover {
-	background: $accent-color;
+	background-color: $accent-color;
 	color: $main-color;
 	box-shadow: 0 0 0 2px $accent-color inset;
 	@include box-rounding;
@@ -26,6 +26,7 @@
 		right: 20px;
 	}
 	cursor: pointer;
+	user-select: none;
 
 	&.opaque {
 		background: transparent;
@@ -53,7 +54,7 @@
 	
 	&.disabled, &.disabled:hover, &.disabled:active {
 		cursor: default;
-		background: transparent;
+		background-color: transparent;
 		color: $unaccent-color;
 		box-shadow: 0 0 0 2px $unaccent-color inset;
 	}

@@ -1,4 +1,7 @@
-class User {
+import { CookieJar } from './CookieJar.js';
+import Loader from './Loader.js';
+
+export class User {
 
 	constructor(data) {
 
@@ -52,7 +55,7 @@ class User {
 
 	static async byLogin(login, password) {
 
-		return await loader.call('post', 'auth/login', {
+		return await Loader.call('post', 'auth/login', {
 			"login":  login,
 			"password": password
 		})
@@ -65,7 +68,7 @@ class User {
 
 	static async byRegister(name, login, password) {
 
-		return await loader.call('post', 'auth/register', {
+		return await Loader.call('post', 'auth/register', {
 			"name": name,
 			"login": login,
 			"password": password
@@ -80,7 +83,7 @@ class User {
 	/*Renew current access_token. */
 	async renewAccess() {
 
-		return await loader.call('get', 'auth/renew', {
+		return await Loader.call('get', 'auth/renew', {
 			'relogin': this.relogin_token
 		})
 			.then(
@@ -93,7 +96,7 @@ class User {
 	/*Reject all access_token and relogin_token's. */
 	async terminateSessions() {
 
-		return await loader.call('get', 'auth/logout', {
+		return await Loader.call('get', 'auth/logout', {
 			'token': this.access_token
 		})
 			.then(
@@ -106,7 +109,7 @@ class User {
 	/*Reject current access_token. */
 	async logout() {
 
-		return await loader.call('get', 'auth/reject', {
+		return await Loader.call('get', 'auth/reject', {
 			'token': this.access_token
 		})
 			.then(

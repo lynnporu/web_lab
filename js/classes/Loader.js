@@ -6,7 +6,7 @@ class Loader {
 
 	}
 
-	call(method, url, query_params) {
+	call(method, url, query_params, form=null) {
 
 		return new Promise((resolve, reject) => {
 
@@ -33,10 +33,13 @@ class Loader {
 
 			}
 
-			request.send();
+			if (form) request.send(form);
+			else request.send();
 
 		});
 
 	}
 
 }
+
+export default new Loader('http://localhost:8080/api/v1/');

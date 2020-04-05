@@ -1,4 +1,4 @@
-class CookieJar {
+export class CookieJar {
 
 	static put(key, value, options = {}) {
 
