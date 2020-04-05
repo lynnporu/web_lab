@@ -4,15 +4,15 @@ class User {
 
 		this.changeData(data);
 
-		this.deleteCookies();
-		this.storeInCookies();
-
 	}
 
 	changeData(newData) {
 
 		Object.keys(newData).map(
 			key => this[key] = newData[key])
+
+		this.deleteCookies();
+		this.storeInCookies();
 
 	};
 
