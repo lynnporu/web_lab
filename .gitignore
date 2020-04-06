@@ -4,3 +4,5 @@
 api/v1/vendor/*
 *.fuse_*
 composer.*
+
+imgs/*
