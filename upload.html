@@ -49,14 +49,15 @@
 			<h1>Завантажити запис</h1>
 			<p>Ви можете завантажити запис, якщо володієте відповідними авторськими правами, або він перебуває у вільному доступі.</p>
 			<div class="h-row controls-row">
-				<input type="text" placeholder="Виконавець" tabindex="1" autofocus>
-				<input type="text" placeholder="Назва запису" tabindex="2">
+				<input type="text" placeholder="Виконавець" tabindex="1" autofocus id="upload-track-author-input">
+				<input type="text" placeholder="Назва запису" tabindex="2" id="upload-track-name-input">
 			</div>
 			<p>Додайте файл у форматі .mp3, .wav, .ogg або .mp4 розміром не більше 15 мб.</p>
-			<input type="file" id="file-audio" tabindex="3" class="bordered">
-			<label for="file-audio">Обрати файл</label>
-			<button class="disabled break-line top-spacing" tabindex="4">Завершити</button>
+			<input type="file" tabindex="3" class="bordered" id="upload-track-file-input">
+			<label for="upload-track-file-input">Обрати файл</label>
+			<button class="disabled break-line top-spacing" tabindex="4" id="upload-track-done-button">Завершити</button>
 		</div>
 	</div>
+	<script type="module" src="js/track_upload.js"></script>
 </body>
 </html>
