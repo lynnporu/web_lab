@@ -9,16 +9,16 @@
 <body id="main-page">
 	<aside>
 		<nav>
-			<a>
+			<a href="main.html">
 				<i class="fas fa-magic"></i><span>Огляд</span>
 			</a>
-			<a>
+			<a href="playlists.html">
 				<i class="fas fa-list"></i><span>Плейлисти</span>
 			</a>
 			<a class="selected">
 				<i class="fas fa-music"></i><span>Музика</span>
 			</a>
-			<a class="top-spacing">
+			<a class="top-spacing" href="settings.html">
 				<i class="fas fa-cogs"></i><span>Налаштування</span>
 			</a>
 		</nav>
@@ -47,8 +47,8 @@
 		</div>
 		<div class="content box appear" id="music">
 			<div class="h-row controls-row">
-				<button><i class="fas fa-cloud-upload-alt"></i></button>
-				<button class="bordered">Керувати завантаженнями</button>
+				<button id="music-upload-button"><i class="fas fa-cloud-upload-alt"></i></button>
+				<button class="bordered" id="music-uploads-button">Керувати завантаженнями</button>
 			</div>
 			<div class="header-buttons space-between wrap-with-width">
 				<h1>Моя музика</h1>
@@ -56,63 +56,11 @@
 					<input class="search floated" type="text" placeholder="Пошук" required>
 				</div>
 			</div>
-			<span class="subheader">Тут уся завантажена вами музика, і також вміст ваших плейлистів: 805 записів</span>
-			<div class="audio-box no-playing h-row space-between">
-				<div class="h-row center-aligning">
-					<button class="opaque play toggle-icon">
-						<i class="fas fa-play"></i>
-						<i class="fas fa-pause"></i>
-					</button>
-					<div class="info">
-						<b>Magiia</b>
-						<span>5 Vymir</span>
-					</div>
-				</div>
-				<div class="h-row center-aligning">
-					<span class="duration">02:57</span>
-					<button class="opaque">
-						<i class="fas fa-ellipsis-h"></i>
-					</button>
-				</div>
-			</div>
-			<div class="audio-box no-playing h-row space-between">
-				<div class="h-row center-aligning">
-					<button class="opaque play toggle-icon">
-						<i class="fas fa-play"></i>
-						<i class="fas fa-pause"></i>
-					</button>
-					<div class="info">
-						<b>F W T S L M</b>
-						<span>True Widow</span>
-					</div>
-				</div>
-				<div class="h-row center-aligning">
-					<span class="duration">03:48</span>
-					<button class="opaque">
-						<i class="fas fa-ellipsis-h"></i>
-					</button>
-				</div>
-			</div>
-			<div class="audio-box no-playing h-row space-between">
-				<div class="h-row center-aligning">
-					<button class="opaque play toggle-icon">
-						<i class="fas fa-play"></i>
-						<i class="fas fa-pause"></i>
-					</button>
-					<div class="info">
-						<b>Sky Is Over</b>
-						<span>Serj Tankian</span>
-					</div>
-				</div>
-				<div class="h-row center-aligning">
-					<span class="duration">04:02</span>
-					<button class="opaque">
-						<i class="fas fa-ellipsis-h"></i>
-					</button>
-				</div>
-			</div>
-			<button>Показати ще</button>
+			<span class="subheader">Тут уся завантажена вами музика, і також вміст ваших плейлистів: <span id="music-tracks-num"></span> записи</span>
+			<div id="music-tracks-container"></div>
+			<!--<button>Показати ще</button>-->
 		</div>
 	</div>
+	<script type="module" src="js/music.js"></script>
 </body>
 </html>

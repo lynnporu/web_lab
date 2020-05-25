@@ -14,7 +14,7 @@ $ext = [
 	'audio/x-wav' => 'wav'
 ][$_FILES['photo']['type'] ?? 'audio/mpeg'];
 
-$audioname = $_SERVER["DOCUMENT_ROOT"] . '/audio/' . uniqid() . '.' . $ext;
+$audioname = 'audio/' . uniqid() . '.' . $ext;
 
 move_uploaded_file($_FILES['file']['tmp_name'], $audioname);
 
@@ -22,7 +22,8 @@ $GLOBALS['e_mongo']->data->music->insertOne([
 	'user_id' => $GLOBALS['auth_user_id'],
 	'file_url' => $audioname,
 	'name' => $name,
-	'author' => $author
+	'author' => $author,
+	'duration' => rand(120, 300)
 ]);
 
 no_content("New song was created.");

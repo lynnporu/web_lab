@@ -10,14 +10,15 @@
 		<h1>playlist</h1>
 		<span>Введіть свої дані</span>
 		<div class="full-w-column">
-			<input type="text" class="max-long-in-column" name="name" placeholder="Ім'я" tabindex="1" autofocus="">
-			<input type="text" class="max-long-in-column" name="login" placeholder="Логін" tabindex="2">
-			<input type="password" class="max-long-in-column" name="password" placeholder="Пароль" tabindex="3">
+			<input type="text" class="max-long-in-column" name="name" placeholder="Ім'я" tabindex="1" autofocus="" id="register-name-input">
+			<input type="text" class="max-long-in-column" name="login" placeholder="Логін" tabindex="2" id="register-login-input">
+			<input type="password" class="max-long-in-column" name="password" placeholder="Пароль" tabindex="3" id="register-password-input">
 		</div>
 		<div class="h-row controls-row top-spacing">
-			<input type="submit" value="Закінчити" tabindex="4">
-			<input type="submit" class="bordered" value="Увійти" tabindex="5">
+			<input type="submit" value="Закінчити" tabindex="4" id="register-end-button">
+			<input type="submit" class="bordered" value="Увійти" tabindex="5" id="register-login-button">
 		</div>
 	</div>
+	<script type="module" src="js/register.js"></script>
 </body>
 </html>

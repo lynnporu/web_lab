@@ -4,10 +4,12 @@ class User implements JsonSerializable{
 
 	private $name;
 	private $id;
+	private $login;
 
 	public function __construct($mongodoc) {
 		$this->name			= $mongodoc->name;
 		$this->id			= $mongodoc->_id;
+		$this->login        = $mongodoc->login;
 	}
 
 	public static function byId($id) {
@@ -19,7 +21,8 @@ class User implements JsonSerializable{
 	public function jsonSerialize() {
 		return [
 			"id"	=> $this->id->__toString(),
-			"name"	=> $this->name
+			"name"	=> $this->name,
+			"login" => $this->login
 		];
 	}
 
