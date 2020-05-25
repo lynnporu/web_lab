@@ -49,14 +49,15 @@
 			<h1>Створити плейлист</h1>
 			<div class="playlist-create">
 				<div class="file">
-					<input type="file" id="file-playlist-create" tabindex="2">
-					<label for="file-playlist-create">Додайте фото</label>
+					<input type="file" id="create-playlist-input-button">
+					<label class="image-button bordered" for="create-playlist-input-button" id="create-playlist-image-button">Додайте фото</label>
 				</div>
-				<input type="text" placeholder="Назва плейлисту" tabindex="1" autofocus>
+				<input type="text" placeholder="Назва плейлисту" tabindex="1" id="create-playlist-name-input" autofocus>
 			</div>
 			<p>Ви зможете наповнювати плейлист кнопкою <i class="fas fa-plus inline-icon"></i> біля записів.</p>
-			<button>Закінчити</button>
+			<button id="create-playlist-done-button">Закінчити</button>
 		</div>
 	</div>
+	<script type="module" src="js/playlist_create.js"></script>
 </body>
 </html>

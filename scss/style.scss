@@ -3,14 +3,14 @@
 $black-text-color:			#333;
 $main-color:				white;
 $accent-color:				blue;
-$accent-pale-color:			#00f2;
-$accent-pale-darker-color: #11f3;
-$accent-medium-color:   #00f8;
+$accent-pale-color:			rgba(0, 0,  255, .13);
+$accent-pale-darker-color: 	rgba(17, 17, 255, .2);
+$accent-medium-color:  		rgba(0, 0, 255, .5);
 $accent-darker-color:		#00d;
-$unaccent-color:			#667d;
-$unaccent-darker-color:		#667f;
+$unaccent-color:			rgba(102, 102, 119, .8);
+$unaccent-darker-color:		rgb(102, 102, 119);
 $unaccent-dark-color:		#556;
-$opacity-color:				#e2e2e2;
+$opacity-color:				#e2e 2e2;
 $opacity-darker-color:		#d9d9d9;
 $light-color:				#f1f1f1;
 
