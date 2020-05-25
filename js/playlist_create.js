@@ -7,8 +7,6 @@ let image_button = document.getElementById('create-playlist-image-button');
 let done_button = document.getElementById('create-playlist-done-button');
 let name_input = document.getElementById('create-playlist-name-input');
 
-//User.byLogin('me', '123');
-
 let user = User.loadByCookies();
 if (!user) console.error("User data was not loaded.");
 
@@ -30,8 +28,8 @@ done_button.addEventListener('click', e => {
 		'name': name_input.value
 	}, form)
 		.then(
-			resolve => console.log(resolve),
+			resolve => document.location.replace('playlists.html'),
 			reject => console.error(reject)
-		);
+		)
 
 });

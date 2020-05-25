@@ -12,34 +12,34 @@
 			<a class="selected">
 				<i class="fas fa-magic"></i><span>Огляд</span>
 			</a>
-			<a>
+			<a href="playlists.html">
 				<i class="fas fa-list"></i><span>Плейлисти</span>
 			</a>
-			<a>
+			<a href="music.html">
 				<i class="fas fa-music"></i><span>Музика</span>
 			</a>
-			<a class="top-spacing">
+			<a class="top-spacing" href="settings.html">
 				<i class="fas fa-cogs"></i><span>Налаштування</span>
 			</a>
 		</nav>
 	</aside>
 	<div class="content-wrapper">
-		<div class="player h-row playing space-between hidden">
+		<div class="player h-row playing space-between hidden" id="main-player-container">
 			<div class="h-row center-aligning">
 				<button class="opaque play toggle-icon">
 					<i class="fas fa-play"></i>
 					<i class="fas fa-pause"></i>
 				</button>
 				<div class="info">
-					<b>Oak Island</b>
-					<span>Ra</span>
+					<b id="main-player-name"></b>
+					<span id="main-player-author"></span>
 				</div>
 			</div>
 			<div class="progress">
 				<div class="bullet"></div>
 			</div>
 			<div class="h-row center-aligning">
-				<span class="duration">02:57</span>
+				<span class="duration" id="main-player-duration"></span>
 				<button class="opaque">
 					<i class="fas fa-ellipsis-h"></i>
 				</button>
@@ -50,104 +50,14 @@
 				<h1>Плейлисти</h1>
 				<button class="bordered">Мої плейлисти</button>
 			</div>
-			<div class="h-row wrap-with-width">
-				<div class="playlist">
-					<img src="imgs/playlist.jpg" alt="Обкладинка плейлисту Сонячний день">
-					<h3>Сонячний день</h3>
-				</div>
-				<div class="playlist">
-					<img src="imgs/playlist1.jpeg" alt="Обкладинка плейлисту Інді рулить">
-					<h3>Інді рулить</h3>
-				</div>
-				<div class="playlist">
-					<img src="imgs/playlist2.jpg" alt="Обкладинка плейлисту Повільний джаз">
-					<h3>Повільний джаз</h3>
-				</div>
-				<div class="playlist">
-					<img src="imgs/playlist3.jpeg" alt="Обкладинка плейлисту Вихідні">
-					<h3>Вихідні</h3>
-				</div>
-			</div>
+			<div class="h-row wrap-with-width" id="main-playlists-container"></div>
 			<div class="header-buttons">
 				<h1>Нові записи</h1>
 				<button class="bordered"><i class="fas fa-search"></i></button>
 			</div>
-			<div class="full-w-row">
-				<div class="audio-box no-playing h-row space-between">
-					<div class="h-row center-aligning">
-						<button class="opaque play toggle-icon">
-							<i class="fas fa-play"></i>
-							<i class="fas fa-pause"></i>
-						</button>
-						<div class="info">
-							<b>Magiia</b>
-							<span>5 Vymir</span>
-						</div>
-					</div>
-					<div class="h-row center-aligning">
-						<span class="duration">02:57</span>
-						<button class="opaque">
-							<i class="fas fa-ellipsis-h"></i>
-						</button>
-					</div>
-				</div>
-				<div class="audio-box h-row space-between playing">
-					<div class="h-row center-aligning">
-						<button class="opaque play toggle-icon">
-							<i class="fas fa-play"></i>
-							<i class="fas fa-pause"></i>
-						</button>
-						<div class="info">
-							<b>Oak Island</b>
-							<span>Ra</span>
-						</div>
-					</div>
-					<div class="h-row center-aligning">
-						<span class="duration">02:57</span>
-						<button class="opaque">
-							<i class="fas fa-ellipsis-h"></i>
-						</button>
-					</div>
-				</div>
-				<div class="audio-box no-playing h-row space-between">
-					<div class="h-row center-aligning">
-						<button class="opaque play toggle-icon">
-							<i class="fas fa-play"></i>
-							<i class="fas fa-pause"></i>
-						</button>
-						<div class="info">
-							<b>F W T S L M</b>
-							<span>True Widow</span>
-						</div>
-					</div>
-					<div class="h-row center-aligning">
-						<span class="duration">03:48</span>
-						<button class="opaque">
-							<i class="fas fa-ellipsis-h"></i>
-						</button>
-					</div>
-				</div>
-				<div class="audio-box no-playing h-row space-between">
-					<div class="h-row center-aligning">
-						<button class="opaque play toggle-icon">
-							<i class="fas fa-play"></i>
-							<i class="fas fa-pause"></i>
-						</button>
-						<div class="info">
-							<b>Sky Is Over</b>
-							<span>Serj Tankian</span>
-						</div>
-					</div>
-					<div class="h-row center-aligning">
-						<span class="duration">04:02</span>
-						<button class="opaque">
-							<i class="fas fa-ellipsis-h"></i>
-						</button>
-					</div>
-				</div>
-			</div>
+			<div class="full-w-row" id="main-tracks-container"></div>
 		</div>
 	</div>
-	<script type="text/javascript" src="js/main.js"></script>
+	<script type="module" src="js/main.js"></script>
 </body>
 </html>

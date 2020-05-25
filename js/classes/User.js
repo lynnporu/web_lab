@@ -83,6 +83,8 @@ export class User {
 	/*Renew current access_token. */
 	async renewAccess() {
 
+		if (!this.relogin_token) return;
+
 		return await Loader.call('get', 'auth/renew', {
 			'relogin': this.relogin_token
 		})
@@ -96,6 +98,8 @@ export class User {
 	/*Reject all access_token and relogin_token's. */
 	async terminateSessions() {
 
+		if (!this.access_token) return;
+
 		return await Loader.call('get', 'auth/logout', {
 			'token': this.access_token
 		})
@@ -108,6 +112,8 @@ export class User {
 
 	/*Reject current access_token. */
 	async logout() {
+
+		if (!this.access_token) return;
 
 		return await Loader.call('get', 'auth/reject', {
 			'token': this.access_token

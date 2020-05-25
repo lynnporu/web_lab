@@ -10,7 +10,7 @@ $accent-darker-color:		#00d;
 $unaccent-color:			rgba(102, 102, 119, .8);
 $unaccent-darker-color:		rgb(102, 102, 119);
 $unaccent-dark-color:		#556;
-$opacity-color:				#e2e 2e2;
+$opacity-color:				rgba(0,0,0,.1);
 $opacity-darker-color:		#d9d9d9;
 $light-color:				#f1f1f1;
 
@@ -62,6 +62,10 @@ h2 + span {
 
 p {
 	margin: 3em 0;
+}
+
+.hidden {
+	display: none !important;
 }
 
 @import "containers";

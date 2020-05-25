@@ -26,7 +26,7 @@ done_button.addEventListener('click', e => {
 		'author': author_input.value
 	}, form)
 		.then(
-			resolve => console.log(resolve),
+			resolve => document.location.replace('music.html'),
 			reject => console.error(reject)
 		);
 

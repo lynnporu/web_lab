@@ -13,7 +13,7 @@ $ext = [
 	'image/png' => 'png'
 ][$_FILES['photo']['type'] ?? 'image/jpeg'];
 
-$photoname = $_SERVER["DOCUMENT_ROOT"] . '/imgs/' . uniqid() . '.' . $ext;
+$photoname = 'imgs/' . uniqid() . '.' . $ext;
 
 move_uploaded_file($_FILES['photo']['tmp_name'], $photoname);
 
