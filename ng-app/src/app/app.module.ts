@@ -9,6 +9,7 @@ import { AsideComponent } from './aside/aside.component';
 import { PlayerComponent } from './player/player.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MainPageComponent } from './main-page/main-page.component';
+import { PlaylistsPageComponent } from './playlists-page/playlists-page.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MainPageComponent } from './main-page/main-page.component';
     TrackGalleryComponent,
     AsideComponent,
     PlayerComponent,
-    MainPageComponent
+    MainPageComponent,
+    PlaylistsPageComponent
   ],
   imports: [
     BrowserModule,
