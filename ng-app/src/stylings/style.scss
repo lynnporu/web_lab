@@ -1,0 +1,73 @@
+@import url(https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap&subset=cyrillic);
+
+$black-text-color:			#333;
+$main-color:				white;
+$accent-color:				blue;
+$accent-pale-color:			rgba(0, 0,  255, .13);
+$accent-pale-darker-color: 	rgba(17, 17, 255, .2);
+$accent-medium-color:  		rgba(0, 0, 255, .5);
+$accent-darker-color:		#00d;
+$unaccent-color:			rgba(102, 102, 119, .8);
+$unaccent-darker-color:		rgb(102, 102, 119);
+$unaccent-dark-color:		#556;
+$opacity-color:				rgba(0,0,0,.1);
+$opacity-darker-color:		#d9d9d9;
+$light-color:				#f1f1f1;
+
+$std-transition:			.15s;
+
+$first-level-media:			885px;
+
+body {
+	font-family: Rubik, sans-serif;
+	margin: 0;
+	padding: 0;
+	background: #f4f4f4;
+	font-size: 12px;
+	color: $black-text-color;
+}
+
+h1, h2, h3 {
+	font-weight: 500;
+}
+
+h1 {
+	margin: 40px 0 40px;
+}
+
+h1 + span, h2 + span, span.subheader {
+	display: block;	
+	color: $unaccent-color;
+}
+
+h1 + span, span.subheader {
+	margin: -30px 0 40px;
+}
+
+h2 + span {
+	margin: -5px 0 40px;
+}
+
+.top-spacing {
+	margin-top: 3em;
+}
+
+.break-line {
+	display: block;
+}
+
+.inline-icon {
+	padding: 0 10px;
+}
+
+p {
+	margin: 3em 0;
+}
+
+.hidden {
+	display: none !important;
+}
+
+@import "containers";
+@import "box";
+@import "controls";

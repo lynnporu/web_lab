@@ -17,6 +17,11 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/stylings"
+              ]
+            },
             "outputPath": "dist/ng-app",
             "index": "src/index.html",
             "main": "src/main.ts",

@@ -1,0 +1,17 @@
+@import "variables";
+@import "box";
+@import "controls";
+@import "containers";
+@import "fonts";
+
+img {
+
+	width: 180px;
+	height: 180px;
+	display: block;
+	margin-right: 30px;
+	@include box-hard-shadowing;
+	@include box-rounding;
+	transition: $std-transition;
+	
+}
