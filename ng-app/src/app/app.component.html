@@ -1,3 +1,43 @@
-<app-player></app-player>
-<app-track-gallery></app-track-gallery>
-<app-playlist-gallery></app-playlist-gallery>
+<div id="root-main-page">
+	<aside>
+		<nav>
+			<a class="selected">
+				<fa-icon [icon]="faMagic" class="fa-magic"></fa-icon>
+				<span>Огляд</span>
+			</a>
+			<a>
+				<fa-icon [icon]="faList" class="fa-list"></fa-icon>
+				<span>Плейлисти</span>
+			</a>
+			<a>
+				<fa-icon [icon]="faMusic" class="fa-music"></fa-icon>
+				<span>Музика</span>
+			</a>
+			<a class="top-spacing">
+				<fa-icon [icon]="faCogs" class="fa-cogs"></fa-icon>
+				<span>Налаштування</span>
+			</a>
+		</nav>
+	</aside>
+	<div class="content-wrapper">
+		<app-player></app-player>
+		<div class="content box appear" id="observe">
+			<div class="header-buttons">
+				<h1>Плейлисти</h1>
+				<button class="bordered">Мої плейлисти</button>
+			</div>
+			<div class="h-row wrap-with-width">
+				<app-playlist-gallery></app-playlist-gallery>
+			</div>
+			<div class="header-buttons">
+				<h1>Нові записи</h1>
+				<button class="bordered">
+					<fa-icon [icon]="faSearch" class="fa-search"></fa-icon>
+				</button>
+			</div>
+			<div class="full-w-row">
+				<app-track-gallery></app-track-gallery>
+			</div>
+		</div>
+	</div>
+</div>

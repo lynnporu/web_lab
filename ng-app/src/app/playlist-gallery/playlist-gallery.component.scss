@@ -4,14 +4,28 @@
 @import "containers";
 @import "fonts";
 
-img {
+.h-row .playlist {
 
-	width: 180px;
-	height: 180px;
-	display: block;
 	margin-right: 30px;
-	@include box-hard-shadowing;
-	@include box-rounding;
-	transition: $std-transition;
+	cursor: pointer;
 	
+	&:last-child {
+		margin-right: 0;
+	}
+	
+	img {
+
+		width: 130px;
+		height: 130px;
+		display: block;
+		@include box-hard-shadowing;
+		@include box-rounding;
+		transition: $std-transition;
+		
+	}
+	
+	img:hover {
+		@include box-hard-darker-shadowing;
+	}
+
 }
