@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Playlist } from '../playlist';
 import { PlaylistGalleryService } from '../playlist-gallery.service';
 
@@ -11,6 +11,8 @@ export class PlaylistGalleryComponent implements OnInit {
 
   playlists: Playlist[];
 
+  @Input() source: string;
+
   constructor(public playlistGalleryService: PlaylistGalleryService) { }
 
   ngOnInit(): void {
@@ -18,7 +20,7 @@ export class PlaylistGalleryComponent implements OnInit {
   }
 
   getPlaylists(): void {
-  	this.playlistGalleryService.getPlaylists()
+  	this.playlistGalleryService.getPlaylists(this.source)
   		.subscribe(playlists => this.playlists = playlists);
   }
 

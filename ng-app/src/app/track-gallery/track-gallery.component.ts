@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { faPlay,
          faPause,
          faEllipsisH } from '@fortawesome/free-solid-svg-icons';
@@ -18,6 +18,8 @@ export class TrackGalleryComponent implements OnInit {
 
   tracks: Track[];
 
+  @Input() source: string;
+
   constructor(public trackGalleryService: TrackGalleryService) { }
 
   ngOnInit(): void {
@@ -25,7 +27,7 @@ export class TrackGalleryComponent implements OnInit {
   }
 
   getTracks(): void {
-  	this.trackGalleryService.getTracks()
+  	this.trackGalleryService.getTracks(this.source)
   		.subscribe(tracks => this.tracks = tracks);
   }
 

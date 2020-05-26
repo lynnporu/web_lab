@@ -1,19 +1,19 @@
 <div id="root-main-page">
 	<aside>
 		<nav>
-			<a class="selected">
+			<a class="selected" routerLink="">
 				<fa-icon [icon]="faMagic" class="fa-magic"></fa-icon>
 				<span>Огляд</span>
 			</a>
-			<a>
+			<a routerLink="playlists">
 				<fa-icon [icon]="faList" class="fa-list"></fa-icon>
 				<span>Плейлисти</span>
 			</a>
-			<a>
+			<a routerLink="tracks">
 				<fa-icon [icon]="faMusic" class="fa-music"></fa-icon>
 				<span>Музика</span>
 			</a>
-			<a class="top-spacing">
+			<a class="top-spacing" routerLink="settings">
 				<fa-icon [icon]="faCogs" class="fa-cogs"></fa-icon>
 				<span>Налаштування</span>
 			</a>
@@ -21,6 +21,6 @@
 	</aside>
 	<div class="content-wrapper">
 		<app-player></app-player>
-		<app-settings-page></app-settings-page>
+		<router-outlet></router-outlet>
 	</div>
 </div>

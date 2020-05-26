@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { Observable, of } from 'rxjs';
-import { PLAYLISTS } from './mock-playlists';
+import { PROFILE_PLAYLISTS, ALL_PLAYLISTS } from './mock-playlists';
 import { Playlist } from './playlist';
 
 @Injectable({
@@ -11,8 +11,13 @@ export class PlaylistGalleryService {
 
   constructor() { }
 
-  getPlaylists() : Observable<Playlist[]> {
-  	return of(PLAYLISTS);
+  getPlaylists(source) : Observable<Playlist[]> {
+  	switch(source){
+  		case 'profile':
+  			return of(PROFILE_PLAYLISTS); break;
+  		case 'all':
+  			return of(ALL_PLAYLISTS); break;
+  	}
   }
 
 }

@@ -46,6 +46,7 @@ nav {
 		margin-right: 25px;
 		@include row-flex;
 		align-items: center;
+		text-decoration: none;
 		
 		@media (max-width: $first-level-media) {
 			padding: 15px;
