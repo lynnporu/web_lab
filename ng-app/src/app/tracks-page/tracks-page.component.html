@@ -1,0 +1,17 @@
+<div class="content box appear" id="music">
+	<div class="h-row controls-row">
+		<button>
+			<fa-icon [icon]="faCloudUploadAlt" class="fa-cloud-upload-alt"></fa-icon>
+		</button>
+		<button class="bordered">Керувати завантаженнями</button>
+	</div>
+	<div class="header-buttons space-between wrap-with-width">
+		<h1>Моя музика</h1>
+		<div class="grow-wrapper">
+			<input class="search floated" type="text" placeholder="Пошук" required>
+		</div>
+	</div>
+	<span class="subheader">Тут уся завантажена вами музика, і також вміст ваших плейлистів: 805 записів</span>
+	<app-track-gallery></app-track-gallery>
+	<button>Показати ще</button>
+</div>

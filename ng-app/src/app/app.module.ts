@@ -10,6 +10,7 @@ import { PlayerComponent } from './player/player.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MainPageComponent } from './main-page/main-page.component';
 import { PlaylistsPageComponent } from './playlists-page/playlists-page.component';
+import { TracksPageComponent } from './tracks-page/tracks-page.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PlaylistsPageComponent } from './playlists-page/playlists-page.componen
     AsideComponent,
     PlayerComponent,
     MainPageComponent,
-    PlaylistsPageComponent
+    PlaylistsPageComponent,
+    TracksPageComponent
   ],
   imports: [
     BrowserModule,
