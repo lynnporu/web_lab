@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 
+import { Observable, of } from 'rxjs';
+import { TRACKS } from './mock-tracks';
 import { Track } from './track';
 
 @Injectable({
@@ -7,7 +9,10 @@ import { Track } from './track';
 })
 export class TrackGalleryService {
 
-  tracks: Track[] = [];
-
   constructor() { }
+
+  getTracks() : Observable<Track[]> {
+    return of(TRACKS);
+  }
+
 }
