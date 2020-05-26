@@ -16,6 +16,5 @@ export class AppComponent {
   faList = faList;
   faMusic = faMusic;
   faCogs = faCogs;
-  faSearch = faSearch;
   title = 'ng-app';
 }

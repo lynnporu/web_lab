@@ -8,6 +8,7 @@ import { TrackGalleryComponent } from './track-gallery/track-gallery.component';
 import { AsideComponent } from './aside/aside.component';
 import { PlayerComponent } from './player/player.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MainPageComponent } from './main-page/main-page.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     PlaylistGalleryComponent,
     TrackGalleryComponent,
     AsideComponent,
-    PlayerComponent
+    PlayerComponent,
+    MainPageComponent
   ],
   imports: [
     BrowserModule,
