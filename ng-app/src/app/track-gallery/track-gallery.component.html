@@ -14,8 +14,9 @@
 	</div>
 	<div class="h-row center-aligning">
 		<span class="duration">{{track.duration}}</span>
-		<button class="opaque">
-			<fa-icon [icon]="faEllipsisH" class="fa-ellipsis-h"></fa-icon>
+		<button class="opaque" >
+			<fa-icon [icon]="faEllipsisH" class="fa-ellipsis-h" *ngIf="controls === 'simple'"></fa-icon>
+			<fa-icon [icon]="faTimes" class="fa-times" *ngIf="controls === 'delete'"></fa-icon>
 		</button>
 	</div>
 </div>

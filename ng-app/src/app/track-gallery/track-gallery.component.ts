@@ -1,7 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { faPlay,
          faPause,
-         faEllipsisH } from '@fortawesome/free-solid-svg-icons';
+         faEllipsisH,
+         faTimes } from '@fortawesome/free-solid-svg-icons';
 import { Track } from '../track';
 import { TrackGalleryService } from '../track-gallery.service';
 
@@ -15,14 +16,17 @@ export class TrackGalleryComponent implements OnInit {
   faPlay = faPlay;
   faPause = faPause;
   faEllipsisH = faEllipsisH;
+  faTimes = faTimes;
 
   tracks: Track[];
 
   @Input() source: string;
+  @Input() controls: string;
 
   constructor(public trackGalleryService: TrackGalleryService) { }
 
   ngOnInit(): void {
+    if(!this.controls) this.controls = 'simple';
   	this.getTracks();
   }
 

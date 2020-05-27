@@ -4,6 +4,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { PlaylistsPageComponent } from './playlists-page/playlists-page.component';
 import { TracksPageComponent } from './tracks-page/tracks-page.component';
 import { SettingsPageComponent } from './settings-page/settings-page.component';
+import { UploadsPageComponent } from './uploads-page/uploads-page.component';
 
 
 const routes: Routes = [
@@ -11,7 +12,8 @@ const routes: Routes = [
 	{ path: 'observe', component: MainPageComponent },
 	{ path: 'tracks', component: TracksPageComponent },
 	{ path: 'playlists', component: PlaylistsPageComponent },
-	{ path: 'settings', component: SettingsPageComponent }
+	{ path: 'settings', component: SettingsPageComponent },
+	{ path: 'uploads', component: UploadsPageComponent }
 ];
 
 @NgModule({

@@ -12,6 +12,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { PlaylistsPageComponent } from './playlists-page/playlists-page.component';
 import { TracksPageComponent } from './tracks-page/tracks-page.component';
 import { SettingsPageComponent } from './settings-page/settings-page.component';
+import { UploadsPageComponent } from './uploads-page/uploads-page.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SettingsPageComponent } from './settings-page/settings-page.component';
     MainPageComponent,
     PlaylistsPageComponent,
     TracksPageComponent,
-    SettingsPageComponent
+    SettingsPageComponent,
+    UploadsPageComponent
   ],
   imports: [
     BrowserModule,

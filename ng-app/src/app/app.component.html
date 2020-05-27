@@ -1,19 +1,31 @@
 <div id="root-main-page">
 	<aside>
 		<nav>
-			<a class="selected" routerLink="">
+			<a
+				routerLinkActive="selected"
+				routerLink="observe"
+			>
 				<fa-icon [icon]="faMagic" class="fa-magic"></fa-icon>
 				<span>Огляд</span>
 			</a>
-			<a routerLink="playlists">
+			<a
+				routerLinkActive="selected"
+				routerLink="playlists"
+			>
 				<fa-icon [icon]="faList" class="fa-list"></fa-icon>
 				<span>Плейлисти</span>
 			</a>
-			<a routerLink="tracks">
+			<a
+				routerLinkActive="selected"
+				routerLink="tracks"
+			>
 				<fa-icon [icon]="faMusic" class="fa-music"></fa-icon>
 				<span>Музика</span>
 			</a>
-			<a class="top-spacing" routerLink="settings">
+			<a
+				routerLinkActive="selected"
+				routerLink="settings"
+			>
 				<fa-icon [icon]="faCogs" class="fa-cogs"></fa-icon>
 				<span>Налаштування</span>
 			</a>
