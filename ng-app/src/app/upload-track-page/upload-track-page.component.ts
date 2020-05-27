@@ -34,7 +34,7 @@ export class UploadTrackPageComponent implements OnInit {
         this.trackName,
         this.trackAuthor
     ).subscribe((response) => {
-      alert(response);
+      console.log(response);
     });
   }
 

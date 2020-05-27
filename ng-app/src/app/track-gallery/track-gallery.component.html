@@ -13,7 +13,7 @@
 		</div>
 	</div>
 	<div class="h-row center-aligning">
-		<span class="duration">{{track.duration}}</span>
+		<span class="duration">{{toTimeString(track.duration)}}</span>
 		<button class="opaque" >
 			<fa-icon [icon]="faEllipsisH" class="fa-ellipsis-h" *ngIf="controls === 'simple'"></fa-icon>
 			<fa-icon [icon]="faTimes" class="fa-times" *ngIf="controls === 'delete'" (click)="deleteTrack(track)"></fa-icon>

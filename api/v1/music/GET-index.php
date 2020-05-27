@@ -12,6 +12,8 @@ $playlists_cursor = $GLOBALS['e_mongo']->data->music->find(
 		: []
 );
 
+$docs = [];
+
 foreach ($playlists_cursor as $doc) {
 	$docs[] = [
 		'id'		=> $doc->_id->__toString(),

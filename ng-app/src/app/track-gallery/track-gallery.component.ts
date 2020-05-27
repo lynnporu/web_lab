@@ -43,4 +43,14 @@ export class TrackGalleryComponent implements OnInit {
     );
   }
 
+  toTimeString(duration) {
+    let num_minutes = Math.floor(duration / 60);
+    let num_seconds = duration % 60;
+    let str_minutes = num_minutes.toString();
+    let str_seconds = num_seconds.toString();
+    if(num_minutes < 10) str_minutes = "0" + str_minutes;
+    if(num_seconds < 10) str_seconds = "0" + str_seconds;
+    return str_minutes + ":" + str_seconds;
+  }
+
 }
