@@ -25,6 +25,11 @@ export class TrackGalleryComponent implements OnInit {
 
   constructor(public trackGalleryService: TrackGalleryService) { }
 
+  deleteTrack(track: Track): void {
+    this.tracks = this.tracks.filter(
+      item => item.id !== track.id);
+  }
+
   ngOnInit(): void {
     if(!this.controls) this.controls = 'simple';
   	this.getTracks();
