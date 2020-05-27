@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { faMagic,
          faList,
@@ -17,4 +17,22 @@ export class AppComponent {
   faMusic = faMusic;
   faCogs = faCogs;
   title = 'ng-app';
+
+  private inputLogin;
+  private inputPassword;
+
+  authorized = false;
+
+  login() {
+    console.log(this.inputLogin);
+    console.log(this.inputPassword);
+    if(
+      this.inputPassword == "admin" &&
+      this.inputLogin == "admin"
+    ){
+      this.authorized = true;
+      auth_token = '1ea8d528676e8db9fac140d9f99e87711f252528';
+    }
+  }
+
 }

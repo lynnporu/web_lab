@@ -69,7 +69,7 @@ function auth($strict=true) {
 	}
 
 	//Token is outdated.
-	if(
+	/*if(
 		abs(
 			$record->created->toDateTime()->getTimestamp() -
 			(new DateTime())->getTimestamp()
@@ -89,7 +89,7 @@ function auth($strict=true) {
 
 		forbidden(
 			"Your access_token is outdated.", AUTH_OUTDATED);
-	}
+	}*/
 
 	//Token exists and not outdated.
 

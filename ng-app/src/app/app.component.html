@@ -1,4 +1,4 @@
-<div id="root-main-page">
+<div id="root-main-page" *ngIf="authorized">
 	<aside>
 		<nav>
 			<a
@@ -34,5 +34,17 @@
 	<div class="content-wrapper">
 		<app-player></app-player>
 		<router-outlet></router-outlet>
+	</div>
+</div>
+<div class="box center-w" id="loginBox" *ngIf="!authorized">
+	<h1>playlist</h1>
+	<span>Увійдіть, щоби продовжити</span>
+	<div class="full-w-column">
+		<input type="text" class="max-long-in-column" name="login" placeholder="Логін" tabindex="1" autofocus="" id="login-login-input" (change)="this.inputLogin = $event.target.value">
+		<input type="password" class="max-long-in-column" name="password" placeholder="Пароль" tabindex="2" id="login-password-input" (change)="this.inputPassword = $event.target.value">
+	</div>
+	<div class="h-row controls-row top-spacing">
+		<input type="submit" value="Увійти" tabindex="3" id="login-login-button" (click)="login()">
+		<input type="submit" class="bordered" value="Зареєструватись" tabindex="4" id="login-register-button">
 	</div>
 </div>

@@ -39,7 +39,7 @@ export class TrackGalleryComponent implements OnInit {
 
   getTracks(): void {
   	this.trackGalleryService.getTracks(this.source).subscribe(
-      (response) => this.tracks = response.response
+      (response) => this.tracks = response["response"]
     );
   }
 

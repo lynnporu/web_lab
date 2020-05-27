@@ -19,12 +19,12 @@ export class TrackGalleryService {
     private http: HttpClient
   ) { }
 
-  getTracks(source) : Observable<Track[]> {
+  getTracks(source) {
   	switch(source){
   		case 'profile':
-        return this.http.get(this.profileTracksRoute);
+        return this.http.get(this.profileTracksRoute + "?token=" + auth_token);
   		case 'all':
-        return this.http.get(this.allTracksRoute);
+        return this.http.get(this.allTracksRoute + "?token=" + auth_token);
   	}
   }
 
