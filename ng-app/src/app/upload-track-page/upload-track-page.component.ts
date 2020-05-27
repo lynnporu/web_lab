@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { UploadTrackPageService } from '../upload-track-page.service';
+
 @Component({
   selector: 'app-upload-track-page',
   templateUrl: './upload-track-page.component.html',
@@ -12,7 +14,9 @@ export class UploadTrackPageComponent implements OnInit {
   trackName = undefined;
   trackAuthor = undefined;
 
-  constructor() { }
+  constructor(
+    public uploadTrackPageService: UploadTrackPageService
+  ) { }
 
   ngOnInit(): void {
   }
@@ -25,13 +29,10 @@ export class UploadTrackPageComponent implements OnInit {
   uploadFile(e) {
     if(e.target.classList.contains('disabled')) return false;
 
-    let form = new FormData();
-    form.append("file", this.trackFile);
-    this.http.post(
-      "/api/v1/music?" +
-      "token=" + "0" + "&" +
-      "name=" + this.trackName + "&" +
-      "author=" + this.trackAuthor
+    this.uploadTrackPageService.uploadTrack(
+        this.trackFile,
+        this.trackName,
+        this.trackAuthor
     ).subscribe((response) => {
       alert(response);
     });

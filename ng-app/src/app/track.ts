@@ -1,6 +1,7 @@
 export interface Track {
-	id: number;
+	id: string;
 	name: string;
 	author: string;
 	duration: number;
+	file_url: string;
 }

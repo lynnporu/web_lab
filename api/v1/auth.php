@@ -30,7 +30,7 @@ $GLOBALS['auth_user_successful'] = null;
 $GLOBALS['auth_user_id'] = null;
 $GLOBALS['auth_user_obj'] = null;
 
-$GLOBALS['auth_disable'] = false;
+$GLOBALS['auth_disable'] = true;
 
 function generate_auth_token($length) {
 	return bin2hex(random_bytes($length));
