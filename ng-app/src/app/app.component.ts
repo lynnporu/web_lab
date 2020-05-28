@@ -19,14 +19,12 @@ export class AppComponent {
   faCogs = faCogs;
   title = 'ng-app';
 
-  private inputLogin;
-  private inputPassword;
+  public inputLogin;
+  public inputPassword;
 
   authorized = false;
 
   login() {
-    console.log(this.inputLogin);
-    console.log(this.inputPassword);
     if(
       this.inputPassword == "admin" &&
       this.inputLogin == "admin"
