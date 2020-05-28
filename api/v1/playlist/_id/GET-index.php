@@ -6,7 +6,7 @@ $id = demand('id');
 
 auth();
 
-$playlist = $GLOBALS['e_mongo']->data->playlists->find([
+$playlist = $GLOBALS['e_mongo']->data->playlists->findOne([
 	"_id" => new MongoDB\BSON\ObjectId($id)
 ]);
 
@@ -54,9 +54,9 @@ $playlists_cursor = $GLOBALS['e_mongo']->data->playlists->find(
 );
 
 emit([
-	'id'		=> $doc->_id->__toString(),
-	'name'		=> $doc->name,
-	'image_url'	=> 'http://localhost:8080/' . ($doc->photo_url),
+	'id'		=> $playlist->_id->__toString(),
+	'name'		=> $playlist->name,
+	'image_url'	=> 'http://localhost:8080/' . ($playlist->photo_url),
 	'tracks'	=> $tracks
 ]);
 
