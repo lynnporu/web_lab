@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Global } from '../global';
+
 @Component({
   selector: 'app-settings-page',
   templateUrl: './settings-page.component.html',
@@ -13,7 +15,7 @@ export class SettingsPageComponent implements OnInit {
   }
 
   logout() {
-  	auth_token = null;
+  	Global.auth_token = null;
   	window.location.reload();
   }
 

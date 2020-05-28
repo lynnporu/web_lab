@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 
+import { Global } from './global';
+
 import { Router } from '@angular/router';
 
 import { Observable, of } from 'rxjs';
@@ -26,7 +28,7 @@ export class UploadTrackPageService {
       "token=" + "0" + "&" +
       "name=" + name + "&" +
       "author=" + author + "&" +
-      "token=" + auth_token,
+      "token=" + Global.auth_token,
       form
     );
     this.router.navigate(['/tracks']);

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Global } from './global';
 
 import { faMagic,
          faList,
@@ -31,7 +32,7 @@ export class AppComponent {
       this.inputLogin == "admin"
     ){
       this.authorized = true;
-      auth_token = '1ea8d528676e8db9fac140d9f99e87711f252528';
+      Global.auth_token = '1ea8d528676e8db9fac140d9f99e87711f252528';
     }
   }
 

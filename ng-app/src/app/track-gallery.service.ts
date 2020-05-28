@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 
+import { Global } from './global';
+
 import { Observable, of } from 'rxjs';
 import { PROFILE_TRACKS, ALL_TRACKS } from './mock-tracks';
 import { Track } from './track';
@@ -22,14 +24,14 @@ export class TrackGalleryService {
   getTracks(source) {
   	switch(source){
   		case 'profile':
-        return this.http.get(this.profileTracksRoute + "&token=" + auth_token);
+        return this.http.get(this.profileTracksRoute + "&token=" + Global.auth_token);
   		case 'all':
-        return this.http.get(this.allTracksRoute + "?token=" + auth_token);
+        return this.http.get(this.allTracksRoute + "?token=" + Global.auth_token);
   	}
   }
 
   deleteTrack(id: string) {
-    return this.http.delete(this.deleteTrackRoute + id + "&token=" + auth_token);
+    return this.http.delete(this.deleteTrackRoute + id + "&token=" + Global.auth_token);
   }
 
 }
