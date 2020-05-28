@@ -10,6 +10,10 @@ $playlist = $GLOBALS['e_mongo']->data->playlists->findOne([
 	"_id" => new MongoDB\BSON\ObjectId($id)
 ]);
 
+$playlist_author = $GLOBALS['e_mongo']->auth->users->findOne([
+	"_id" => $playlist->user_id
+]);
+
 $tracks_cursor = $GLOBALS['e_mongo']->data->playlists->aggregate([
 	[
 		'$match' => ["_id" => new MongoDB\BSON\ObjectId($id)]
@@ -57,6 +61,10 @@ emit([
 	'id'		=> $playlist->_id->__toString(),
 	'name'		=> $playlist->name,
 	'image_url'	=> 'http://localhost:8080/' . ($playlist->photo_url),
+	'author'	=> [
+		'name'	=> $playlist_author->name,
+		'id'	=> $playlist_author->_id->__toString()
+	],
 	'tracks'	=> $tracks
 ]);
 

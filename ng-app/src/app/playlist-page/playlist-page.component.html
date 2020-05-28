@@ -1,0 +1,18 @@
+<div class="content box appear" id="playlist">
+	<div class="playlist-info">
+		<img src="{{playlistPhotoUrl}}" alt="Обкладинка плейлисту {{playlistName}}">
+		<div class="info">
+			<h2>{{playlistName}}</h2>
+			<span>Автор: {{playlistAuthor}}</span>
+			<div class="h-row controls-row">
+				<button class="bordered">Редагувати</button>
+				<button class="bordered">
+					<fa-icon [icon]="faShareAlt" class="fa-share-alt"></fa-icon>
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="full-w-row">
+		<app-track-gallery source="global"></app-track-gallery>
+	</div>
+</div>

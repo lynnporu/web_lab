@@ -1,5 +1,5 @@
 <div class="h-row">
-	<div *ngFor="let playlist of playlists" class="playlist">
+	<div *ngFor="let playlist of playlists" class="playlist" routerLink="/playlist/{{playlist.id}}">
 		<img src="{{playlist.image_url}}" alt="{{playlist.name}}">
 		<h3>{{playlist.name}}</h3>
 	</div>

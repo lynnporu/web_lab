@@ -18,6 +18,7 @@ import { UploadsPageComponent } from './uploads-page/uploads-page.component';
 import { UploadTrackPageComponent } from './upload-track-page/upload-track-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { CreatePlaylistPageComponent } from './create-playlist-page/create-playlist-page.component';
+import { PlaylistPageComponent } from './playlist-page/playlist-page.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { CreatePlaylistPageComponent } from './create-playlist-page/create-playl
     UploadsPageComponent,
     UploadTrackPageComponent,
     LoginPageComponent,
-    CreatePlaylistPageComponent
+    CreatePlaylistPageComponent,
+    PlaylistPageComponent
   ],
   imports: [
     BrowserModule,

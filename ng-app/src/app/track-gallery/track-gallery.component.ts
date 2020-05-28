@@ -6,6 +6,8 @@ import { faPlay,
 import { Track } from '../track';
 import { TrackGalleryService } from '../track-gallery.service';
 
+import { Global } from '../global';
+
 @Component({
   selector: 'app-track-gallery',
   templateUrl: './track-gallery.component.html',
@@ -38,6 +40,11 @@ export class TrackGalleryComponent implements OnInit {
   }
 
   getTracks(): void {
+    if(this.source == 'global'){
+      Global.tracks_thread.subscribe((response) => {
+        this.tracks = response['response']['tracks'];
+      });
+    }
   	this.trackGalleryService.getTracks(this.source).subscribe(
       (response) => this.tracks = response["response"]
     );

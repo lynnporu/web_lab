@@ -7,7 +7,7 @@ import { SettingsPageComponent } from './settings-page/settings-page.component';
 import { UploadsPageComponent } from './uploads-page/uploads-page.component';
 import { UploadTrackPageComponent } from './upload-track-page/upload-track-page.component';
 import { CreatePlaylistPageComponent } from './create-playlist-page/create-playlist-page.component';
-
+import { PlaylistPageComponent } from './playlist-page/playlist-page.component';
 
 const routes: Routes = [
 	{ path: '', redirectTo: 'observe', pathMatch: 'full' },
@@ -17,7 +17,8 @@ const routes: Routes = [
 	{ path: 'settings', component: SettingsPageComponent },
 	{ path: 'uploads', component: UploadsPageComponent },
 	{ path: 'upload', component: UploadTrackPageComponent },
-	{ path: 'newplaylist', component: CreatePlaylistPageComponent }
+	{ path: 'newplaylist', component: CreatePlaylistPageComponent },
+	{ path: 'playlist/:id', component: PlaylistPageComponent }
 ];
 
 @NgModule({
