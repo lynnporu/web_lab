@@ -20,7 +20,7 @@ foreach ($playlists_cursor as $doc) {
 		'name'		=> $doc->name,
 		'author'	=> $doc->author,
 		'duration'	=> $doc->duration,
-		'file_url'	=> $doc->file_url
+		'file_url'	=> 'http://localhost:8080/' . ($doc->file_url)
 	];
 }
 

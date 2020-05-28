@@ -22,12 +22,14 @@ export class TrackGalleryService {
   ) { }
 
   getTracks(source) {
-  	switch(source){
-  		case 'profile':
+    switch(source){
+      case 'profile':
         return this.http.get(this.profileTracksRoute + "&token=" + Global.auth_token);
-  		case 'all':
+        break;
+      case 'all':
         return this.http.get(this.allTracksRoute + "?token=" + Global.auth_token);
-  	}
+        break;
+    }
   }
 
   deleteTrack(id: string) {

@@ -2,8 +2,8 @@
 	<input class="search floated with-margin" type="text" placeholder="Пошук" required>
 	<div class="header-buttons">
 		<h1>Мої плейлисти</h1>
-		<button class="bordered" id="playlists-add-button">
-			<fa-icon [icon]="faSearch" class="fa-search"></fa-icon>
+		<button class="bordered" id="playlists-add-button" routerLink="/newplaylist">
+			<fa-icon [icon]="faPlus" class="fa-plus"></fa-icon>
 		</button>
 	</div>
 	<div class="h-row wrap-with-width" id="playlists-container-my"></div>

@@ -9,9 +9,10 @@ import { PlaylistGalleryService } from '../playlist-gallery.service';
 })
 export class PlaylistGalleryComponent implements OnInit {
 
-  playlists: Playlist[];
+  playlists;
 
   @Input() source: string;
+  @Input() limit: number;
 
   constructor(public playlistGalleryService: PlaylistGalleryService) { }
 
@@ -20,8 +21,9 @@ export class PlaylistGalleryComponent implements OnInit {
   }
 
   getPlaylists(): void {
-  	this.playlistGalleryService.getPlaylists(this.source)
-  		.subscribe(playlists => this.playlists = playlists);
+    if(!this.limit) this.limit = 0;
+  	this.playlistGalleryService.getPlaylists(this.source, this.limit)
+  		.subscribe(playlists => this.playlists = playlists["response"]);
   }
 
 }
