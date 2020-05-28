@@ -13,6 +13,7 @@
 		</div>
 	</div>
 	<div class="full-w-row">
-		<app-track-gallery source="global"></app-track-gallery>
+		<span *ngIf="isEmpty">Плейлист порожній.</span>
+		<app-track-gallery source="global" *ngIf="!isEmpty"></app-track-gallery>
 	</div>
 </div>

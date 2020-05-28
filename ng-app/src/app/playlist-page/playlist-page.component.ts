@@ -21,6 +21,7 @@ export class PlaylistPageComponent implements OnInit {
   playlistAuthor = undefined;
   playlistId = undefined;
   isAuthor = false;
+  isEmpty = true;
 
   constructor(
     private route: ActivatedRoute,
@@ -36,6 +37,7 @@ export class PlaylistPageComponent implements OnInit {
       this.playlistName = response['response']['name'];
       this.playlistPhotoUrl = response['response']['image_url'];
       this.playlistAuthor = response['response']['author']['name'];
+      if(response['response']['tracks'].length !== 0) this.isEmpty = false;
       if(
         response['response']['author']['id'] == Global.user_id
       ){

@@ -33,7 +33,7 @@ export class TrackGalleryComponent implements OnInit {
         this.trackGalleryService.deletePlaylistTrack(
           response['response']['id'],
           track.id
-        );
+        ).subscribe();
       });
     } else {
       this.trackGalleryService.deleteTrack(track.id).subscribe(
@@ -53,10 +53,11 @@ export class TrackGalleryComponent implements OnInit {
       Global.tracks_thread.subscribe((response) => {
         this.tracks = response['response']['tracks'];
       });
+    } else {
+    	this.trackGalleryService.getTracks(this.source).subscribe(
+        (response) => this.tracks = response["response"]
+      );
     }
-  	this.trackGalleryService.getTracks(this.source).subscribe(
-      (response) => this.tracks = response["response"]
-    );
   }
 
   toTimeString(duration) {
