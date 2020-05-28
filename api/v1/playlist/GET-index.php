@@ -10,7 +10,7 @@ $playlists_cursor = $GLOBALS['e_mongo']->data->playlists->find(
 	$source == 'profile'
 		? ['user_id' => $GLOBALS['auth_user_id']]
 		: [],
-	["limit" => grab('limit', null, 0) * 1]
+	["limit" => (int)grab('limit', null, 0)]
 );
 
 

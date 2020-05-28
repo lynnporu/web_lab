@@ -1,0 +1,41 @@
+@import "variables";
+@import "box";
+@import "controls";
+@import "containers";
+@import "fonts";
+
+.playlist-create {
+	
+	@include row-flex;
+	align-items: flex-start;
+	
+	.file {
+		margin-right: 40px;
+	}
+	
+	.image-button {
+		@include bordered-button;
+		width: 180px;
+		height: 180px;
+		text-align: center;
+		display: table-cell;
+		vertical-align: middle;
+		padding: 0;
+		background-size: cover;
+		background-position: center;
+	}
+	
+	.image-button:hover {
+		@include bordered-button-hover;
+	}
+
+	.image-button.loaded-file {
+		box-shadow: none;
+		color: transparent;
+	}
+
+	.image-button.loaded-file:hover {
+		color: transparent;
+	}
+	
+}

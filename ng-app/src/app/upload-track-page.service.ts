@@ -25,7 +25,6 @@ export class UploadTrackPageService {
     form.append("file",file);
     let response =  this.http.post(
       this.uploadTrackRoute +
-      "token=" + "0" + "&" +
       "name=" + name + "&" +
       "author=" + author + "&" +
       "token=" + Global.auth_token,

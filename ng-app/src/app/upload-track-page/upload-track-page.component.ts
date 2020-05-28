@@ -27,7 +27,7 @@ export class UploadTrackPageComponent implements OnInit {
   }
 
   uploadFile(e) {
-    if(e.target.classList.contains('disabled')) return false;
+    if(this.isDisabled) return false;
 
     this.uploadTrackPageService.uploadTrack(
         this.trackFile,

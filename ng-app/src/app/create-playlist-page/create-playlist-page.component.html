@@ -1,0 +1,22 @@
+<div class="content box appear" id="playlist_create">
+	<h1>Створити плейлист</h1>
+	<div class="playlist-create">
+		<div class="file">
+			<input type="file" (change)="handleFile($event)" id="create-playlist-input-button">
+			<label
+				class="image-button bordered"
+				for="create-playlist-input-button" 
+				[ngStyle]="{'background-image':'url('+photoUrl+')'}"
+				[ngClass]="{
+					'loaded-file': photoUrl,
+					'not-loaded-file': !photoUrl
+				}">Додайте фото</label>
+		</div>
+		<input type="text" placeholder="Назва плейлисту" tabindex="1" id="create-playlist-name-input" autofocus (change)="playlistName=$event.target.value">
+	</div>
+	<p>Ви зможете наповнювати плейлист кнопкою <fa-icon [icon]="faPlus" class="fas fa-plus inline-icon"></fa-icon> біля записів.</p>
+	<button id="create-playlist-done-button" [ngClass]="{
+		'disabled': isDisabled,
+		'enabled': !isDisabled
+	}" (click)="upload()">Закінчити</button>
+</div>
