@@ -5,7 +5,7 @@
 			<h2>{{playlistName}}</h2>
 			<span>Автор: {{playlistAuthor}}</span>
 			<div class="h-row controls-row">
-				<button class="bordered">Редагувати</button>
+				<button class="bordered" routerLink="/editplaylist/{{playlistId}}" *ngIf="isAuthor">Редагувати</button>
 				<button class="bordered">
 					<fa-icon [icon]="faShareAlt" class="fa-share-alt"></fa-icon>
 				</button>

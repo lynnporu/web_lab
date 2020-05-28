@@ -36,4 +36,8 @@ export class TrackGalleryService {
     return this.http.delete(this.deleteTrackRoute + id + "&token=" + Global.auth_token);
   }
 
+  deletePlaylistTrack(playlist_id: string, track_id: string) {
+    console.log(playlist_id, track_id);
+  }
+
 }

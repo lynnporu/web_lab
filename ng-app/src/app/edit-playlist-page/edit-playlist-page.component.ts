@@ -1,26 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
+import { faEllipsisH } from '@fortawesome/free-solid-svg-icons';
+
 import { Global } from '../global';
 
 import { PlaylistPageService } from '../playlist-page.service';
 
-import { faShareAlt } from '@fortawesome/free-solid-svg-icons';
-
 @Component({
-  selector: 'app-playlist-page',
-  templateUrl: './playlist-page.component.html',
-  styleUrls: ['./playlist-page.component.scss']
+  selector: 'app-edit-playlist-page',
+  templateUrl: './edit-playlist-page.component.html',
+  styleUrls: ['./edit-playlist-page.component.scss']
 })
-export class PlaylistPageComponent implements OnInit {
+export class EditPlaylistPageComponent implements OnInit {
 
-  faShareAlt = faShareAlt;
-
-  playlistName = undefined;
-  playlistPhotoUrl = undefined;
-  playlistAuthor = undefined;
   playlistId = undefined;
-  isAuthor = false;
+  playlistPhotoUrl = undefined;
+  playlistName = undefined;
+
+  faEllipsisH = faEllipsisH;
 
   constructor(
     private route: ActivatedRoute,
@@ -35,12 +33,6 @@ export class PlaylistPageComponent implements OnInit {
       this.playlistId = response['response']['id'];
       this.playlistName = response['response']['name'];
       this.playlistPhotoUrl = response['response']['image_url'];
-      this.playlistAuthor = response['response']['author']['name'];
-      if(
-        response['response']['author']['id'] == Global.user_id
-      ){
-        this.isAuthor = true;
-      }
     });
   }
 

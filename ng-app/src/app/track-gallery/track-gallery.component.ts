@@ -28,8 +28,17 @@ export class TrackGalleryComponent implements OnInit {
   constructor(public trackGalleryService: TrackGalleryService) { }
 
   deleteTrack(track: Track): void {
-    this.trackGalleryService.deleteTrack(track.id).subscribe(
-      response => console.log('deleted'));
+    if(this.source == 'global') {
+      Global.tracks_thread.subscribe((response) => {
+        this.trackGalleryService.deletePlaylistTrack(
+          response['response']['id'],
+          track.id
+        );
+      });
+    } else {
+      this.trackGalleryService.deleteTrack(track.id).subscribe(
+        response => console.log('deleted'));
+    }
     this.tracks = this.tracks.filter(
       item => item.id !== track.id);
   }
