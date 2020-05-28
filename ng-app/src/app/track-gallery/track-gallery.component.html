@@ -1,0 +1,22 @@
+<div 
+	*ngFor='let track of tracks'
+	class="audio-box no-playing h-row space-between"
+>
+	<div class="h-row center-aligning">
+		<button class="opaque play toggle-icon">
+			<fa-icon [icon]="faPlay" class="fa-play"></fa-icon>
+			<fa-icon [icon]="faPause" class="fa-pause"></fa-icon>
+		</button>
+		<div class="info">
+			<b>{{track.name}}</b>
+			<span>{{track.author}}</span>
+		</div>
+	</div>
+	<div class="h-row center-aligning">
+		<span class="duration">{{toTimeString(track.duration)}}</span>
+		<button class="opaque" >
+			<fa-icon [icon]="faEllipsisH" class="fa-ellipsis-h" *ngIf="controls === 'simple'"></fa-icon>
+			<fa-icon [icon]="faTimes" class="fa-times" *ngIf="controls === 'delete'" (click)="deleteTrack(track)"></fa-icon>
+		</button>
+	</div>
+</div>

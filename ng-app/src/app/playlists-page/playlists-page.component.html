@@ -1,0 +1,14 @@
+<div class="content box appear" id="playlists">
+	<input class="search floated with-margin" type="text" placeholder="Пошук" required>
+	<div class="header-buttons">
+		<h1>Мої плейлисти</h1>
+		<button class="bordered" id="playlists-add-button">
+			<fa-icon [icon]="faSearch" class="fa-search"></fa-icon>
+		</button>
+	</div>
+	<div class="h-row wrap-with-width" id="playlists-container-my"></div>
+	<app-playlist-gallery source="profile"></app-playlist-gallery>
+	<h1>Всі плейлисти</h1>
+	<div class="h-row allow-wrapping" id="playlists-container-all"></div>
+	<app-playlist-gallery source="all"></app-playlist-gallery>
+</div>

@@ -1,0 +1,113 @@
+@import "variables";
+
+@mixin column-flex {
+	display: flex;
+	flex-direction: column;
+}
+
+@mixin row-flex {
+	display: flex;
+	flex-direction: row;
+}
+
+#one-box-page {
+
+	padding: 50px 0;
+
+	@media (max-width: $first-level-media) {
+
+		padding: 0;
+
+		.box {
+			width: auto;
+		}
+
+	}
+
+}
+
+
+.full-w-column {
+	@include column-flex;
+}
+
+.full-w-column.space-in-column > *:not(:last-child) {
+	margin-bottom: 15px;
+}
+
+.h-row {
+	@include row-flex;
+}
+
+.h-row.wrap-with-width, .header-buttons.wrap-with-width {
+	
+	@media (max-width: $first-level-media) {
+		flex-wrap: wrap;
+	}
+
+}
+
+.h-row .grow-wrapper, .header-buttons .grow-wrapper {
+	flex-grow: 1;
+}
+
+.h-row.allow-wrapping{
+	flex-wrap: wrap;
+}
+
+.space-between {
+	justify-content: space-between;
+}
+
+.center-aligning {
+	align-items: center;
+}
+
+.header-buttons {
+	
+	@include row-flex;
+	margin-bottom: 40px;
+	align-items: center;
+	
+	&:not(:first-child) {
+		margin-top: 40px;
+	}
+  
+	h1 {
+		margin: 0 20px 0 0;
+	}
+  
+}
+
+
+.content-wrapper {
+
+	@media (max-width: $first-level-media) {
+		flex-grow: 1;
+	}
+
+	@media (min-width: $first-level-media) {
+		width: 690px;
+	}
+	
+}
+
+.content {
+
+	width: auto;
+	animation-fill-mode: forwards;
+	animation-duration: .15s;
+
+}
+
+.content.disappear {
+	animation-name: box-left-disappear;
+}
+
+.content.appear {
+	animation-name: box-right-appear;
+}
+
+.content.hidden {
+	display: none;
+}

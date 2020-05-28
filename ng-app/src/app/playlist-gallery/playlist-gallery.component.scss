@@ -1,0 +1,35 @@
+@import "variables";
+@import "box";
+@import "controls";
+@import "containers";
+@import "fonts";
+
+.h-row {
+	flex-wrap: wrap;
+}
+
+.h-row .playlist {
+
+	margin-right: 30px;
+	cursor: pointer;
+
+	&:last-child {
+		margin-right: 0;
+	}
+	
+	img {
+
+		width: 130px;
+		height: 130px;
+		display: block;
+		@include box-hard-shadowing;
+		@include box-rounding;
+		transition: $std-transition;
+		
+	}
+	
+	img:hover {
+		@include box-hard-darker-shadowing;
+	}
+
+}

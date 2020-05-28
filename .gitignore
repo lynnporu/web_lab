@@ -8,3 +8,40 @@ api/v1/vendor/*
 composer.*
 
 imgs/*
+
+# compiled output
+ng-app/dist
+ng-app/tmp
+ng-app/out-tsc
+# Only exists if Bazel was run
+ng-app/bazel-out
+
+# dependencies
+ng-app/node_modules
+
+# profiling files
+ng-app/chrome-profiler-events*.json
+ng-app/speed-measure-plugin*.json
+
+# IDEs and editors
+ng-app/.idea
+ng-app/.project
+ng-app/.classpath
+ng-app/.c9/
+ng-app/*.launch
+ng-app/.settings/
+ng-app/*.sublime-workspace
+
+# misc
+ng-app/.sass-cache
+ng-app/connect.lock
+ng-app/coverage
+ng-app/libpeerconnection.log
+ng-app/npm-debug.log
+ng-app/yarn-error.log
+ng-app/testem.log
+ng-app/typings
+
+# System Files
+ng-app/.DS_Store
+ng-app/Thumbs.db

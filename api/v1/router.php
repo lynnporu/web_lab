@@ -5,8 +5,10 @@
 
 set_include_path(__DIR__);
 
-header("Access-Control-Allow-Origin: http://localhost:8080");
+header("Access-Control-Allow-Origin: http://localhost:4200");
 header("Access-Control-Allow-Credentials: true");
+header("Access-Control-Request-Headers: X-Requested-With, accept, content-type");
+header("Access-Control-Allow-Methods: GET, POST, DELETE");
 
 $api_v = "v1";
 $request_uri = $_SERVER["REQUEST_URI"];

@@ -1,0 +1,56 @@
+@import "variables";
+@import "box";
+@import "controls";
+@import "containers";
+@import "fonts";
+
+.audio-box {
+
+	cursor: pointer;
+	transition: $std-transition;
+	background: $light-color;
+	margin-bottom: 15px;
+	padding: 0;
+	padding: 10px;
+	@include box-rounding;
+	
+	&.playing {
+
+		background: $accent-pale-color;
+		color: $accent-color;
+
+		.fa-pause {
+			@include show-toggle-button-icon;
+		}
+
+	}
+
+	&.no-playing {
+
+		.fa-play {
+			@include show-toggle-button-icon;
+		}
+
+	}
+	
+	&.playing:hover {
+		background: $accent-pale-darker-color;
+	}
+	
+	&.playing button.opaque {
+		color: $accent-color;
+	}
+	
+	&:last-child {
+		margin-bottom: 0;
+	}
+	
+	&:hover {
+		background: $opacity-color;
+	}
+	
+	.info b {
+		padding-right: 10px;
+	}
+	
+}
