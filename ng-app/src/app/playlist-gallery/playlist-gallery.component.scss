@@ -4,11 +4,15 @@
 @import "containers";
 @import "fonts";
 
+.h-row {
+	flex-wrap: wrap;
+}
+
 .h-row .playlist {
 
 	margin-right: 30px;
 	cursor: pointer;
-	
+
 	&:last-child {
 		margin-right: 0;
 	}

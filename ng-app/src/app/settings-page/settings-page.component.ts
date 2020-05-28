@@ -12,4 +12,9 @@ export class SettingsPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  logout() {
+  	auth_token = null;
+  	window.location.reload();
+  }
+
 }
