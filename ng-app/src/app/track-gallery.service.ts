@@ -17,6 +17,7 @@ export class TrackGalleryService {
   private allTracksRoute = "http://localhost:8080/api/v1/music";
   private deleteTrackRoute = "http://localhost:8080/api/v1/music?id=";
   private deletePlaylistTrackRoute = "http://localhost:8080/api/v1/music?id=";
+  private addPlaylistTrackRoute = "http://localhost:8080/api/v1/playlist/";
 
   constructor(
     private http: HttpClient
@@ -42,6 +43,14 @@ export class TrackGalleryService {
       this.deletePlaylistTrackRoute + track_id +
       "&playlist=" + playlist_id +
       "&token=" + Global.auth_token);
+  }
+
+  addTrackToPlaylist(track_id, playlist_id) {
+    return this.http.post(
+      this.addPlaylistTrackRoute + playlist_id + "?track=" +
+      track_id + "&token=" + Global.auth_token,
+      null
+    );
   }
 
 }

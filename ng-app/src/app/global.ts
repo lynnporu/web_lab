@@ -4,4 +4,5 @@ export class Global {
 	public static tracks_thread = undefined;
 	public static player = undefined;
 	public static playingId = undefined;
+	public static playlists = undefined;
 }

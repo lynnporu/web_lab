@@ -27,7 +27,7 @@ export class PlaylistGalleryComponent implements OnInit {
   	this.playlistGalleryService.getPlaylists(this.source, this.limit)
   		.subscribe(playlists => {
         this.playlists = playlists["response"];
-        Global.playlists = playlists["response"]
+        if(this.source == "profile") Global.playlists = playlists["response"];
       });
   }
 

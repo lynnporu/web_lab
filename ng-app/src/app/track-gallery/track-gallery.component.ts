@@ -20,12 +20,33 @@ export class TrackGalleryComponent implements OnInit {
   faEllipsisH = faEllipsisH;
   faTimes = faTimes;
 
+  showMenu = false;
+
+  menuId = false;
+
   tracks: Track[];
 
   @Input() source: string;
   @Input() controls: string;
 
   constructor(public trackGalleryService: TrackGalleryService) { }
+
+  playingNow(id) {
+    return id == Global.playingId;
+  }
+
+  get playlists() {
+    return Global.playlists;
+  }
+
+  addTrackToPlaylist(track_id, playlist_id) {
+    this.trackGalleryService.addTrackToPlaylist(
+      track_id, playlist_id
+    ).subscribe((response) => {
+      this.showMenu = false;
+      this.menuId = undefined;        
+    });
+  }
 
   deleteTrack(track: Track): void {
     if(this.source == 'global') {
