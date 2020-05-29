@@ -1,0 +1,33 @@
+@import "variables";
+@import "box";
+@import "controls";
+@import "containers";
+@import "fonts";
+
+.playlist-info {
+	
+	@include row-flex;
+	align-items: flex-start;
+	margin-bottom: 40px;
+	
+	img {
+
+		width: 180px;
+		height: 180px;
+		display: block;
+		margin-right: 30px;
+		@include box-hard-shadowing;
+		@include box-rounding;
+		transition: $std-transition;
+		
+	}
+	
+}
+
+.playlist-edit {
+
+	.controls-row button {
+		margin-bottom: 15px;
+	}
+
+}

@@ -12,7 +12,7 @@ $ext = [
 	'audio/mpeg' => 'mp3',
 	'application/ogg' => 'ogg',
 	'audio/x-wav' => 'wav'
-][$_FILES['photo']['type'] ?? 'audio/mpeg'];
+][$_FILES['file']['type'] ?? 'audio/mpeg'];
 
 $audioname = 'audio/' . uniqid() . '.' . $ext;
 

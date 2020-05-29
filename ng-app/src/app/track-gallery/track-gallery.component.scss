@@ -54,3 +54,29 @@
 	}
 	
 }
+
+.context-menu {
+
+	background: black;
+	color: white;
+	padding: 10px;
+	@include box-rounding;
+	position: fixed;
+	transform: translateY(85px);
+
+	&.hidden {
+		display: none;
+	}
+
+	& div {
+		padding: 3px 0;
+		margin: 3px 0;
+		cursor: pointer;
+		transition: .1s;
+	}
+
+	& div:hover {
+		background: $accent-color;
+	}
+
+}

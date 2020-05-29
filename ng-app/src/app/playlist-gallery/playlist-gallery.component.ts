@@ -2,6 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Playlist } from '../playlist';
 import { PlaylistGalleryService } from '../playlist-gallery.service';
 
+import { Global } from '../global';
+
 @Component({
   selector: 'app-playlist-gallery',
   templateUrl: './playlist-gallery.component.html',
@@ -9,9 +11,10 @@ import { PlaylistGalleryService } from '../playlist-gallery.service';
 })
 export class PlaylistGalleryComponent implements OnInit {
 
-  playlists: Playlist[];
+  playlists;
 
   @Input() source: string;
+  @Input() limit: number;
 
   constructor(public playlistGalleryService: PlaylistGalleryService) { }
 
@@ -20,8 +23,12 @@ export class PlaylistGalleryComponent implements OnInit {
   }
 
   getPlaylists(): void {
-  	this.playlistGalleryService.getPlaylists(this.source)
-  		.subscribe(playlists => this.playlists = playlists);
+    if(!this.limit) this.limit = 0;
+  	this.playlistGalleryService.getPlaylists(this.source, this.limit)
+  		.subscribe(playlists => {
+        this.playlists = playlists["response"];
+        if(this.source == "profile") Global.playlists = playlists["response"];
+      });
   }
 
 }

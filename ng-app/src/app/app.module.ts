@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import {CommonModule} from '@angular/common';
+
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +19,9 @@ import { SettingsPageComponent } from './settings-page/settings-page.component';
 import { UploadsPageComponent } from './uploads-page/uploads-page.component';
 import { UploadTrackPageComponent } from './upload-track-page/upload-track-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
+import { CreatePlaylistPageComponent } from './create-playlist-page/create-playlist-page.component';
+import { PlaylistPageComponent } from './playlist-page/playlist-page.component';
+import { EditPlaylistPageComponent } from './edit-playlist-page/edit-playlist-page.component';
 
 @NgModule({
   declarations: [
@@ -31,13 +36,17 @@ import { LoginPageComponent } from './login-page/login-page.component';
     SettingsPageComponent,
     UploadsPageComponent,
     UploadTrackPageComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    CreatePlaylistPageComponent,
+    PlaylistPageComponent,
+    EditPlaylistPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,18 @@
+<div class="content box appear" id="playlist">
+	<h1>Редагування плейлисту</h1>
+	<div class="playlist-info playlist-edit">
+		<img src="{{playlistPhotoUrl}}" alt="Обкладинка плейлисту {{playlistName}}">
+		<div class="info">
+			<input type="text" placeholder="Назва плейлисту" value="{{playlistName}}" tabindex="1" autofocus>
+			<div class="h-row controls-row top-spacing allow-wrapping">
+				<button tabindex="2">Зберегти</button>
+				<button class="bordered" tabindex="3">Нове фото</button>
+				<button class="bordered" tabindex="4">Видалити плейлист</button>
+			</div>
+		</div>
+	</div>
+	<div class="full-w-row">
+		<app-track-gallery source="global" controls="delete"></app-track-gallery>
+	</div>
+	<p>Ви можете наповнювати плейлист кнопкою <fa-icon [icon]="faEllipsisH" class="fa-ellipsis-h inline-icon"></fa-icon> біля записів.</p>
+</div>

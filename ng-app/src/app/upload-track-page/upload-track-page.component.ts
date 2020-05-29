@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Router } from '@angular/router';
+
 import { UploadTrackPageService } from '../upload-track-page.service';
 
 @Component({
@@ -15,7 +17,9 @@ export class UploadTrackPageComponent implements OnInit {
   trackAuthor = undefined;
 
   constructor(
-    public uploadTrackPageService: UploadTrackPageService
+    public uploadTrackPageService: UploadTrackPageService,
+    private router: Router
+
   ) { }
 
   ngOnInit(): void {
@@ -27,15 +31,15 @@ export class UploadTrackPageComponent implements OnInit {
   }
 
   uploadFile(e) {
-    if(e.target.classList.contains('disabled')) return false;
+    if(this.isDisabled) return false;
 
     this.uploadTrackPageService.uploadTrack(
         this.trackFile,
         this.trackName,
         this.trackAuthor
-    ).subscribe((response) => {
-      console.log(response);
-    });
+    ).subscribe(
+      (response) => this.router.navigate(['/tracks'])
+    );
   }
 
 }

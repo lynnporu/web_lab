@@ -6,6 +6,8 @@ import { faPlay,
 import { Track } from '../track';
 import { TrackGalleryService } from '../track-gallery.service';
 
+import { Global } from '../global';
+
 @Component({
   selector: 'app-track-gallery',
   templateUrl: './track-gallery.component.html',
@@ -18,6 +20,10 @@ export class TrackGalleryComponent implements OnInit {
   faEllipsisH = faEllipsisH;
   faTimes = faTimes;
 
+  showMenu = false;
+
+  menuId = false;
+
   tracks: Track[];
 
   @Input() source: string;
@@ -25,9 +31,35 @@ export class TrackGalleryComponent implements OnInit {
 
   constructor(public trackGalleryService: TrackGalleryService) { }
 
+  playingNow(id) {
+    return id == Global.playingId;
+  }
+
+  get playlists() {
+    return Global.playlists;
+  }
+
+  addTrackToPlaylist(track_id, playlist_id) {
+    this.trackGalleryService.addTrackToPlaylist(
+      track_id, playlist_id
+    ).subscribe((response) => {
+      this.showMenu = false;
+      this.menuId = undefined;        
+    });
+  }
+
   deleteTrack(track: Track): void {
-    this.trackGalleryService.deleteTrack(track.id).subscribe(
-      response => console.log('deleted'));
+    if(this.source == 'global') {
+      Global.tracks_thread.subscribe((response) => {
+        this.trackGalleryService.deletePlaylistTrack(
+          response['response']['id'],
+          track.id
+        ).subscribe();
+      });
+    } else {
+      this.trackGalleryService.deleteTrack(track.id).subscribe(
+        response => console.log('deleted'));
+    }
     this.tracks = this.tracks.filter(
       item => item.id !== track.id);
   }
@@ -38,9 +70,15 @@ export class TrackGalleryComponent implements OnInit {
   }
 
   getTracks(): void {
-  	this.trackGalleryService.getTracks(this.source).subscribe(
-      (response) => this.tracks = response["response"]
-    );
+    if(this.source == 'global'){
+      Global.tracks_thread.subscribe((response) => {
+        this.tracks = response['response']['tracks'];
+      });
+    } else {
+    	this.trackGalleryService.getTracks(this.source).subscribe(
+        (response) => this.tracks = response["response"]
+      );
+    }
   }
 
   toTimeString(duration) {
@@ -51,6 +89,19 @@ export class TrackGalleryComponent implements OnInit {
     if(num_minutes < 10) str_minutes = "0" + str_minutes;
     if(num_seconds < 10) str_seconds = "0" + str_seconds;
     return str_minutes + ":" + str_seconds;
+  }
+
+  play(track) {
+    Global.player.play(
+      track.id, track.author, track.name, track.duration,
+      track.file_url
+    );
+    Global.playingId = track.id;
+  }
+
+  pause(track) {
+    Global.player.pause();
+    Global.playingId = undefined;
   }
 
 }

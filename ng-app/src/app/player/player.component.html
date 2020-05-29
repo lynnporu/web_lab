@@ -1,19 +1,22 @@
-<div class="player h-row playing space-between hidden">
+<div class="player h-row space-between" [ngClass]="[
+	isHidden ? 'hidden' : 'visible',
+	isPlaying ? 'playing' : 'no-playing'
+]">
 	<div class="h-row center-aligning">
 		<button class="opaque play toggle-icon">
 			<fa-icon [icon]="faPlay" class="fa-play"></fa-icon>
 			<fa-icon [icon]="faPause" class="fa-pause"></fa-icon>
 		</button>
 		<div class="info">
-			<b>Oak Island</b>
-			<span>Ra</span>
+			<b>{{trackName}}</b>
+			<span>{{trackAuthor}}</span>
 		</div>
 	</div>
 	<div class="progress">
-		<div class="bullet"></div>
+		<div class="bullet" [ngStyle]="{'left' : percentCompleted + '%'}"></div>
 	</div>
 	<div class="h-row center-aligning">
-		<span class="duration">02:57</span>
+		<span class="duration">{{trackLast}}</span>
 		<button class="opaque">
 			<fa-icon [icon]="faEllipsisH" class="fa-ellipsis-h"></fa-icon>
 		</button>

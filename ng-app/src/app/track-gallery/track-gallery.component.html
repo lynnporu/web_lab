@@ -1,11 +1,14 @@
 <div 
 	*ngFor='let track of tracks'
-	class="audio-box no-playing h-row space-between"
+	class="audio-box h-row space-between"
+	[ngClass]="
+		playingNow(track.id) ? 'playing' : 'no-playing'
+	"
 >
 	<div class="h-row center-aligning">
 		<button class="opaque play toggle-icon">
-			<fa-icon [icon]="faPlay" class="fa-play"></fa-icon>
-			<fa-icon [icon]="faPause" class="fa-pause"></fa-icon>
+			<fa-icon [icon]="faPlay" class="fa-play" (click)="play(track)"></fa-icon>
+			<fa-icon [icon]="faPause" class="fa-pause" (click)="pause(track)"></fa-icon>
 		</button>
 		<div class="info">
 			<b>{{track.name}}</b>
@@ -15,8 +18,12 @@
 	<div class="h-row center-aligning">
 		<span class="duration">{{toTimeString(track.duration)}}</span>
 		<button class="opaque" >
-			<fa-icon [icon]="faEllipsisH" class="fa-ellipsis-h" *ngIf="controls === 'simple'"></fa-icon>
+			<fa-icon [icon]="faEllipsisH" class="fa-ellipsis-h" *ngIf="controls === 'simple'" (click)="showMenu=true;menuId=track.id;"></fa-icon>
 			<fa-icon [icon]="faTimes" class="fa-times" *ngIf="controls === 'delete'" (click)="deleteTrack(track)"></fa-icon>
 		</button>
+		<div class="context-menu" [ngClass]="showMenu&&menuId==track.id ? 'visible' : 'hidden'">
+			<i>Додати у плейлист:</i>
+			<div *ngFor="let playlist of playlists" (click)="addTrackToPlaylist(track.id, playlist.id);">{{playlist.name}}</div>
+		</div>
 	</div>
 </div>

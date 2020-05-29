@@ -8,24 +8,26 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class UploadTrackPageService {
+export class CreatePlaylistPageService {
 
-  private uploadTrackRoute = "http://localhost:8080/api/v1/music?";
+  uploadPlaylistRoute = "http://localhost:8080/playlist?";
 
   constructor(
     private http: HttpClient
   ) { }
 
-  uploadTrack(file, name, author) {
+  uploadPlaylist(file, name) {
+
     let form = new FormData();
-    form.append("file",file);
+    form.append("photo", file);
+
     return this.http.post(
-      this.uploadTrackRoute +
-      "name=" + name + "&" +
-      "author=" + author + "&" +
-      "token=" + Global.auth_token,
+      this.uploadPlaylistRoute +
+      "token=" + Global.auth_token + "&" +
+      "name=" + name,
       form
     );
+
   }
 
 }
