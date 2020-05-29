@@ -135,7 +135,8 @@ if( file_exists($scriptName) ) {
 		"html" => "text/html",
 		"css" => "text/css",
 		"js" => "application/javascript",
-		"json" => "application/json"
+		"json" => "application/json",
+		"mp3" => "audio/mpeg"
 	][
 		pathinfo($location, PATHINFO_EXTENSION)
 	] ?? "text/plain";

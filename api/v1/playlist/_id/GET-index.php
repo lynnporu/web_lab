@@ -50,13 +50,6 @@ foreach ($tracks_cursor as $doc) {
 	];
 }
 
-$playlists_cursor = $GLOBALS['e_mongo']->data->playlists->find(
-	$source == 'profile'
-		? ['user_id' => $GLOBALS['auth_user_id']]
-		: [],
-	["limit" => (int)grab('limit', null, 0)]
-);
-
 emit([
 	'id'		=> $playlist->_id->__toString(),
 	'name'		=> $playlist->name,

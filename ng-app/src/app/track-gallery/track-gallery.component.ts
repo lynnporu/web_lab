@@ -70,4 +70,17 @@ export class TrackGalleryComponent implements OnInit {
     return str_minutes + ":" + str_seconds;
   }
 
+  play(track) {
+    Global.player.play(
+      track.id, track.author, track.name, track.duration,
+      track.file_url
+    );
+    Global.playingId = track.id;
+  }
+
+  pause(track) {
+    Global.player.pause();
+    Global.playingId = undefined;
+  }
+
 }
