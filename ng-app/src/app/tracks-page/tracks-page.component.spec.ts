@@ -22,4 +22,9 @@ describe('TracksPageComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('cloud button should link to /upload', () => {
+    expect(component.querySelector('.fa-cloud-upload-alt').routerLink)
+      .toEqual('/upload');
+  });
 });
