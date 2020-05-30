@@ -22,4 +22,14 @@ describe('UploadsPageComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('track gallery should have source profile', () => {
+    expect(component.querySelector('app-track-gallery').getAttribute('source'))
+      .toEqual('profile');
+  });
+
+  it('track gallery should have controls delete', () => {
+    expect(component.querySelector('app-track-gallery').getAttribute('controls'))
+      .toEqual('delete');
+  });
 });
