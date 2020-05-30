@@ -13,4 +13,12 @@ describe('TrackGalleryService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('should have routes set', () => {
+  	expect(service.profileTracksRoute).not.toEqual(null);
+  	expect(service.allTracksRoute).not.toEqual(null);
+  	expect(service.deleteTrackRoute).not.toEqual(null);
+  	expect(service.deletePlaylistTrackRoute).not.toEqual(null);
+  	expect(service.addPlaylistTrackRoute).not.toEqual(null);
+  });
 });
