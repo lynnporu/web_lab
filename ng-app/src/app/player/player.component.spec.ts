@@ -22,4 +22,17 @@ describe('PlayerComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should be hidden', () => {
+    expect(component.querySelector('.player').classList.contains('hidden')).
+      .toEqual(true);
+  })
+
+  it('should contain audio object', () => {
+    expect(component.trackObj).toBeTruthy();
+  });
+
+  it('should have bullet at start', () => {
+    expect(component.querySelector('.bullet').style.left).toEqual(0);
+  });
 });
