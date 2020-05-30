@@ -22,4 +22,9 @@ describe('PlaylistGalleryComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have number of divs as playlists length', () => {
+    expect(component.querySelector('.h-row').children.length)
+      .toEqual(component.playlists.length);
+  });
 });
