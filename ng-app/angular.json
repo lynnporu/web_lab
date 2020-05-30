@@ -19,7 +19,11 @@
           "options": {
             "stylePreprocessorOptions": {
               "includePaths": [
-                "src/stylings"
+                "./src/stylings/_fonts.scss",
+                "./src/stylings/_containers.scss",
+                "./src/stylings/_controls.scss",
+                "./src/stylings/_variables.scss",
+                "./src/stylings/style.scss"
               ]
             },
             "outputPath": "dist/ng-app",
