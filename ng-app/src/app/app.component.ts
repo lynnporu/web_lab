@@ -17,7 +17,7 @@ export class AppComponent {
   faList = faList;
   faMusic = faMusic;
   faCogs = faCogs;
-  title = 'ng-app';
+  title = 'playlist';
 
   public inputLogin;
   public inputPassword;
