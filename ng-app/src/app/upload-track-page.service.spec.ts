@@ -13,4 +13,8 @@ describe('UploadTrackPageService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('should have set uploadTrackPage', () => {
+  	expect(service.uploadTrackRoute).not.toEqual(null);
+  });
 });
