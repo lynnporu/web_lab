@@ -1,5 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { Global } from './global';
+
 import { SettingsPageComponent } from './settings-page.component';
 
 describe('SettingsPageComponent', () => {
@@ -21,5 +23,13 @@ describe('SettingsPageComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should contain user name', () => {
+    expect(component.querySelector('.username')).toEqual(Global.username);
+  });
+
+  it('should contain user login', () => {
+    expect(component.querySelector('.userlogin')).toEqual(Global.userlogin);
   });
 });

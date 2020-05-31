@@ -22,4 +22,9 @@ describe('PlaylistsPageComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should be empty', () => {
+    expect(component.querySelector('app-playlists-gallery').children.length)
+      .toEqual(0);
+  });
 });

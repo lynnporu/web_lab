@@ -13,4 +13,12 @@ describe('PlaylistGalleryService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('should have set profilePlaylistsRoute', () => {
+  	expect(service.profilePlaylistsRoute).not.toEqual(null);
+  });
+
+  it('should have set allPlaylistsRoute', () => {
+  	expect(service.allPlaylistsRoute).not.toEqual(null);
+  });
 });

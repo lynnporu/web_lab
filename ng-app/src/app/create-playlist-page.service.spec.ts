@@ -13,4 +13,8 @@ describe('CreatePlaylistPageService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('should have set uploadPlaylistRoute', () => {
+  	expect(service.uploadPlaylistRoute).not.toEqual(null);
+  });
 });
